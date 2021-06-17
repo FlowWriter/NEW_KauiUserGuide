@@ -1,0 +1,118 @@
+= Kaui User Guide
+
+"Kaui" stands for Kill (Bill) Admin User Interface. (Technically, we should represent it as "KAUI,"" but we think that gets pretty distracting to see repeatedly on the page.)
+
+Kaui is a backend user interface for Kill Bill.
+
+== What You Can Do in Kaui
+
+Users can  perform basic tasks, such as:
+
+* Creating a customer account
+* Generating a customer invoice
+* Canceling a subscription
+
+However, Kaui can also help advanced users perform tasks, for example:
+
+* Adding a plugin to Kill Bill
+* Managing Kill Bill users
+* Creating tags or custom fields
+
+== How to Use This Guide
+
+*Part 1* explains how Kaui is organized and how to perform basic customer service tasks, such as creating accounts, invoices, and so forth. It’s appropriate for back office staff, such as those working in customer service, product management, and finance.
+
+To quickly find what you're looking for, you can use the _Table of Contents_ or our *FAQs*.
+
+*Part 2* explains advanced features of Kaui, for example: customer fields, tags, extensions, and more. It’s appropriate for Kill Bill administrators and software developers.
+
+== Other Learning Resources
+
+=== Glossary
+
+We don't use exotic words in this manual, but some of the terms may have a slightly different meaning from your previous encounters with them. For that reason, we encourage you to review the following terms in the  _Kill Bill Glossary_:
+
+account | payment method | subscription | tag (advanced) | tenant | user
+
+=== Videos
+We regularly add new overviews and tutorials to https://www.youtube.com/c/KillbillIoOSS[our YouTube videos], so check in regularly.
+
+== Navigate
+This section gets you familiar with the standard features of Kaui's user interface.
+
+=== Homepage Layout
+
+The homepage is the screen that Kaui displays after you first log in. Although it looks very simple, there's a lot you can do from this screen:
+
+[[screenshot with labels]]
+- username/tenant
+
+* Search (including advanced)
+* Create new account*
+* View latest invoice, account, or payment
+
+[*]You won't see this feature if it's not part of your user permissions.
+
+Depending on your user permissions, you might also have access to:
+
+* Tags
+* Custom fields
+* Kill Bill Package/Plugin Manager
+* Analytics
+* Admin settings for users and tenants
+
+=== Return to Homepage
+From any screen in Kill Bill, you can return to the homepage by clicking the logo in the upper left corner:
+
+[[logo]]
+
+image:images/killbill_logo_LARGER.png
+
+
+
+=== Expand/collapse sections
+
+=== Plus signs to add objects
+
+=== Grids/Tables
+(sorting, click to open detail, first | previous | next | last)
+
+Return to homepage with KB logo
+
+== Search
+
+
+== Accounts
+
+This section helps you become familiar with customer accounts and the layout of the Account page.
+
+The Account page provides information about a specific customer, such as email address, physical address, and so forth. It is also the central location for the customer's billing informaton, subscriptions, invoices, and payment methods.
+
+To get to a customer's Account page, use the [[Search feature]].
+
+The Account page has the following sections:
+
+* Account information
+* Personal info
+* Billing info
+* Payment methods
+
+
+
+
+For information on changing any of this information, see [Edit an Account].
+
+
+
+=== Create a New Account
+=== View an Account
+Explain related submenus
+=== Edit an Account
+Can’t edit Bill Cycle Day, External Key, Time Zone, Currency
+
+=== Add Tag(s) to an Account
+
+Look up tag definitions: killbill.github.io/slate/#account-tags
+
+=== Add Contact Email Addresses
+=== Close an Account
