@@ -67,11 +67,11 @@ This section gets you familiar with the standard features of Kaui's user interfa
 
 The homepage is the screen that Kaui displays after you first log in. Although it looks very simple, there's a lot you can do from this screen:
 
-image::Homepage-Labeled.png
+image::Homepage-Labeled.png[]
 
 1 Basic search feature to find customer accounts
 2 Advanced search feature to find invoices, payments, and more
-3 
+3
 4
 5
 6
