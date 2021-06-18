@@ -5,7 +5,6 @@
 :revremarks: first draft
 :toc:
 :toclevels: 3
-:imagesdir: ./images 
 
 
 
