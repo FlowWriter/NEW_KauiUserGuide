@@ -20,7 +20,7 @@ Kaui is a backend user interface for Kill Bill.
 
 == What You Can Do in Kaui
 
-Users can  perform basic tasks, such as:
+In Kaui, users can  perform basic tasks, such as:
 
 * Creating a customer account
 * Generating a customer invoice
@@ -40,6 +40,9 @@ To quickly find what you're looking for, you can use the _Table of Contents_ or 
 
 *Part 2* explains advanced features of Kaui, for example: customer fields, tags, extensions, and more. It’s appropriate for Kill Bill administrators and software developers.
 
+=== On Screenshots
+The screenshots displayed in this guide may differ from what you see on your Kaui screen. That's because your user permissions control what features you can access (i.e., what you see on the screen).
+
 == Other Learning Resources
 
 === Glossary
@@ -52,20 +55,34 @@ account | payment method | subscription | tag (advanced) | tenant | user
 We regularly add new overviews and tutorials to https://www.youtube.com/c/KillbillIoOSS[our YouTube videos], so check in regularly.
 
 == Navigate
-This section gets you familiar with the standard features of Kaui's user interface.
+This section gets you familiar with the standard features of Kaui's user interface, such as:
+
+* Homepage layout
+* Basic search
+* Advanced Search
+* Grids/tables
+* Expand/collapse sections
 
 === Homepage Layout
 
 The homepage is the screen that Kaui displays after you first log in. Although it looks very simple, there's a lot you can do from this screen:
 
-[[screenshot with labels]]
+image::Homepage-Labeled.png
+
+1 Basic search feature to find customer accounts
+2 Advanced search feature to find invoices, payments, and more
+3 
+4
+5
+6
+7
+8 This is Killian, the Kill Bill mascot!
+
 - username/tenant
 
-* Search (including advanced)
-* Create new account*
+* Basic and advanced search
+* Create a new customer account
 * View latest invoice, account, or payment
-
-[*]You won't see this feature if it's not part of your user permissions.
 
 Depending on your user permissions, you might also have access to:
 
@@ -78,14 +95,16 @@ Depending on your user permissions, you might also have access to:
 === Return to Homepage
 From any screen in Kill Bill, you can return to the homepage by clicking the logo in the upper left corner:
 
+// MAKE THIS SMALLER
 image::killbill_logo_LARGER.png[]
 
+=== Expand and Collapse Sections
 
+=== Icons
 
-
-=== Expand/collapse sections
-
-=== Plus signs to add objects
+plus sign
+Tags
+plugin Icons
 
 === Grids/Tables
 (sorting, click to open detail, first | previous | next | last)
@@ -93,6 +112,26 @@ image::killbill_logo_LARGER.png[]
 Return to homepage with KB logo
 
 == Search
+
+=== Basic Search for Customer Accounts
+
+=== Advanced Search
+An advanced search can help you find cutomer account, plus:
+
+* Bundles
+* Invoices
+* Credits
+* Custom fields
+* Invoices
+* Invoice payments
+* Payments
+* Subscriptions
+* Transactions
+* Tags
+* Tag Definitions
+
+
+
 
 
 == Accounts
