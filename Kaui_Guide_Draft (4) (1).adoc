@@ -6,17 +6,18 @@
 :toc:
 :toclevels: 3
 
-HI
 
 
 //NOTES
 //https://asciidoctor.org/
+//https://github.com/asciidoctor/asciidoctor.org/blob/main/docs/asciidoc-writers-guide.adoc
+//https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/
 
 
+== What Is Kaui (KAUI)?
+"Kaui" (KAUI ) stands for Kill (Bill) Admin User Interface. We think "Kaui" is easier on the eyes than "KAUI.""
 
-"Kaui" stands for Kill (Bill) Admin User Interface. (Technically, we should represent it as "KAUI,"" but we think that gets pretty distracting to see repeatedly on the page.)
-
-Kaui is a backend user interface for Kill Bill.
+Kaui is a user interface for Kill Bill. You can use Kaui to perform all sorts of back office tasks related to customer accounts. You can also use Kaui to perform more advanced tasks.
 
 == What You Can Do in Kaui
 
@@ -32,6 +33,8 @@ However, Kaui can also help advanced users perform tasks, for example:
 * Managing Kill Bill users
 * Creating tags or custom fields
 
+These are just a handful of the tasks you can accomplish with Kaui. For a full list, see the Table of Contents at the beginning of this guide.
+
 == How to Use This Guide
 
 *Part 1* explains how Kaui is organized and how to perform basic customer service tasks, such as creating accounts, invoices, and so forth. It’s appropriate for back office staff, such as those working in customer service, product management, and finance.
@@ -40,7 +43,7 @@ To quickly find what you're looking for, you can use the _Table of Contents_ or 
 
 *Part 2* explains advanced features of Kaui, for example: customer fields, tags, extensions, and more. It’s appropriate for Kill Bill administrators and software developers.
 
-=== On Screenshots
+=== About Screenshots
 The screenshots displayed in this guide may differ from what you see on your Kaui screen. That's because your user permissions control what features you can access (i.e., what you see on the screen).
 
 == Other Learning Resources
@@ -67,7 +70,7 @@ This section gets you familiar with the standard features of Kaui's user interfa
 
 The homepage is the screen that Kaui displays after you first log in. Although it looks very simple, there's a lot you can do from this screen:
 
-image::Homepage-Labeled.png
+image::Homepage-Labeled.png[]
 
 1 Basic search feature to find customer accounts
 2 Advanced search feature to find invoices, payments, and more
