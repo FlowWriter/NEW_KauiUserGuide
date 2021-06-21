@@ -5,6 +5,7 @@
 :revremarks: first draft
 :toc:
 :toclevels: 3
+:figure-caption!:
 
 
 
@@ -15,7 +16,7 @@
 
 
 == What Is Kaui (KAUI)?
-"Kaui" (KAUI ) stands for Kill (Bill) Admin User Interface. We think "Kaui" is easier on the eyes than "KAUI.""
+"Kaui" (KAUI ) stands for Kill (Bill) Admin User Interface. We think "Kaui" is easier on the eyes than "KAUI."
 
 Kaui is a user interface for Kill Bill. You can use Kaui to perform all sorts of back office tasks related to customer accounts. You can also use Kaui to perform more advanced tasks.
 
@@ -68,24 +69,22 @@ This section gets you familiar with the standard features of Kaui's user interfa
 
 === Homepage Layout
 
-The homepage is the screen that Kaui displays after you first log in. Although it looks very simple, there's a lot you can do from this screen:
+The homepage is the screen that Kaui displays after you first log in.
 
 image::Homepage-Labeled.png[]
 
-1 Basic search feature to find customer accounts
-2 Advanced search feature to find invoices, payments, and more
-3
-4
-5
-6
-7
-8 This is Killian, the Kill Bill mascot!
+1. Basic search feature (find customer accounts)
+2. Advanced search feature (find invoices, payments, and more)
+3. Analytics, KPM (Kill Bill Package Manager), and ???
+4. Tags, Tag Definitions, and Custom Fields
+5. Users, Tenants, and Admin
+6. Username / Tenant name | Signout
+7. Latest invoices, accounts, and payments (for this tenant)
+8. This is Killian, the Kill Bill mascot!
 
-- username/tenant
 
-* Basic and advanced search
-* Create a new customer account
-* View latest invoice, account, or payment
+
+
 
 Depending on your user permissions, you might also have access to:
 
@@ -99,27 +98,32 @@ Depending on your user permissions, you might also have access to:
 From any screen in Kill Bill, you can return to the homepage by clicking the logo in the upper left corner:
 
 // MAKE THIS SMALLER
-image::killbill_logo_LARGER.png[]
+image::killbill_logo_LARGER.png[600,152]
 
 === Expand and Collapse Sections
 
 === Icons
 
-plus sign
+image:i_PlusGreen.png[]  Appears where you can add an item, such as a payment method, credit, charge, etc.
+
+image:i_InvoiceGen.png[]  Appears on the Account page and triggers an invoice generation.
+
+image:i_DownArrow.png[]  Expand a section or dropdown menu.
+
+image:i_UpArrow.png[]  Collapse a section.
+
 Tags
+
 plugin Icons
+
 
 === Grids/Tables
 (sorting, click to open detail, first | previous | next | last)
 
-Return to homepage with KB logo
-
-== Search
-
-=== Basic Search for Customer Accounts
+=== Basic Search
 
 === Advanced Search
-An advanced search can help you find cutomer account, plus:
+An advanced search can help you find customer account, plus:
 
 * Bundles
 * Invoices
