@@ -112,13 +112,47 @@ image:i_DownArrow.png[]  Expand a section or dropdown menu.
 
 image:i_UpArrow.png[]  Collapse a section.
 
-Tags
+image:i_Tag.png[] If you see this at the top of the screen, it gives you access to Tags, Tag Definitions, and Custom Fields. Otherwise, when you see this in other areas, it means you can select a tag to apply to the current object (for example, an account).
 
-plugin Icons
+image:i_Plug.png[] Appears at the top of the screen and gives you access to Analytics, KPM (Kill Bill Package Manager), and ???.
 
+image:i_Addon.png[] Appears on the Subscription screen and lets you add an add-on to the account's subscription.
+
+image:i_CreditCard.png[] Appears on the Invoice screen and lets you make a payment against that invoice.
+
+image:i_Gears.png[] Appears at the top of the screen (for admin-level users) and gives you access to User, Tenant, and Admin.
 
 === Grids/Tables
+Grids (a.k.a. table) appear throughout Kaui to keep lists organized:
+
+Some grids include controls that let you "page" through the grid:
+
+[[SCREEN SHOT]]
+
+You can sort by the data of a specific column by clicking the up/down arrow in the grid header:
+
+[[SCREEN SHOT]]
+
+Kaui shows you which column is currently sorted with a [[blue/purple?]] arrow:
+
+[[SCREEN SHOT]]
+
 (sorting, click to open detail, first | previous | next | last)
+
+Some grids include controls that let you "page" through the grid:
+
+[[SCREEN SHOT]]
+
+If relevant, you can click on a link in the grid to view that item's detail.
+
+_Examples_
+On the Accounts grid, click on the link to view a specific account's details.
+
+[[SCREEN SHOT]]
+
+On the Timeline grid, click on the link to view either payment detail or invoice detail.
+
+[[SCREEN SHOT]]
 
 === Basic Search
 
