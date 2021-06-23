@@ -125,36 +125,37 @@ image:i_Gears.png[] Appears at the top of the screen (for admin-level users) and
 === Grids/Tables
 Grids (a.k.a. table) appear throughout Kaui to keep lists organized:
 
-Some grids include controls that let you "page" through the grid:
+image::GridSample.png[]
 
-[[SCREEN SHOT]]
+At the bottom of some page for some grids, you can use the pagination controls to view different "pages:"
 
-You can sort by the data of a specific column by clicking the up/down arrow in the grid header:
+image::PaginationControls.png[]
 
-[[SCREEN SHOT]]
+To sort columns on a grid, clicking the up/down arrow in that column's header:
 
-Kaui shows you which column is currently sorted with a [[blue/purple?]] arrow:
+image::ShowSortArrowsOnColumn.png[]
 
-[[SCREEN SHOT]]
+Kaui shows you which column is currently sorted by the purple arrow:
 
-(sorting, click to open detail, first | previous | next | last)
+image::ShowSortByColumn.png[]
 
-Some grids include controls that let you "page" through the grid:
+The direction of the arrow (up or down) indicates if the column is sorted in ascending or descending order.
 
-[[SCREEN SHOT]]
+If relevant, you can click on a link in the grid to view that item's detail. For example, on the Invoices grid, click the link to open that specific invoice:
 
-If relevant, you can click on a link in the grid to view that item's detail.
-
-_Examples_
-On the Accounts grid, click on the link to view a specific account's details.
-
-[[SCREEN SHOT]]
-
-On the Timeline grid, click on the link to view either payment detail or invoice detail.
-
-[[SCREEN SHOT]]
+image::ClickToViewDetail.png[]
 
 === Basic Search
+
+You can perform a basic search for customer accounts from either of these locations:
+
+Top of the screenshots
+
+[[screenshot]]
+
+Center of the homepage:
+
+[[screenshot]]
 
 === Advanced Search
 An advanced search can help you find customer account, plus:
