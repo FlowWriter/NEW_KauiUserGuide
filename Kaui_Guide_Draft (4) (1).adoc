@@ -6,10 +6,12 @@
 :toc:
 :toclevels: 3
 :figure-caption!:
+:icons: font
 
+//DINAH'S IMAGES
+//https://drive.google.com/drive/folders/1gmtaGIc2d9MGrgRYPfrZRIAZO3UfnCU3
 
-
-//NOTES
+//RESOURCES
 //https://asciidoctor.org/
 //https://github.com/asciidoctor/asciidoctor.org/blob/main/docs/asciidoc-writers-guide.adoc
 //https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/
@@ -82,10 +84,6 @@ image::Homepage-Labeled.png[]
 7. Latest invoices, accounts, and payments (for this tenant)
 8. This is Killian, the Kill Bill mascot!
 
-
-
-
-
 Depending on your user permissions, you might also have access to:
 
 * Tags
@@ -95,39 +93,51 @@ Depending on your user permissions, you might also have access to:
 * Admin settings for users and tenants
 
 === Return to Homepage
+
 From any screen in Kill Bill, you can return to the homepage by clicking the logo in the upper left corner:
 
-// MAKE THIS SMALLER
 image::killbill_logo_LARGER.png[600,152]
-
-=== Expand and Collapse Sections
 
 === Icons
 
-image:i_PlusGreen.png[]  Appears where you can add an item, such as a payment method, credit, charge, etc.
+[cols="1,1"]
+[cols="25h,~"]
+|===
+^|image:i_PlusGreen.png[]
+|Appears where you can add an item, such as a payment method, credit, charge, etc.
 
-image:i_InvoiceGen.png[]  Appears on the Account page and triggers an invoice generation.
+^|image:i_InvoiceGen.png[]
+|Appears on the Account page and triggers an invoice generation.
 
-image:i_DownArrow.png[]  Expand a section or dropdown menu.
+^|image:i_DownArrow.png[]
+|Expand a section or dropdown menu.
 
-image:i_UpArrow.png[]  Collapse a section.
+^|image:i_UpArrow.png[]
+|Collapse a section.
 
-image:i_Tag.png[] If you see this at the top of the screen, it gives you access to Tags, Tag Definitions, and Custom Fields. Otherwise, when you see this in other areas, it means you can select a tag to apply to the current object (for example, an account).
+^|image:i_Tag.png[]
+|If you see this at the top of the screen, it gives you access to Tags, Tag Definitions, and Custom Fields. Otherwise, when you see this in other areas, it means you can select a tag to apply to the current object (for example, an account).
 
-image:i_Plug.png[] Appears at the top of the screen and gives you access to Analytics, KPM (Kill Bill Package Manager), and ???.
+^|image:i_Plug.png[]
+|Appears at the top of the screen and gives you access to Analytics, KPM (Kill Bill Package Manager), and ???.
 
-image:i_Addon.png[] Appears on the Subscription screen and lets you add an add-on to the account's subscription.
+^|image:i_Addon.png[]
+|Appears on the Subscription screen and lets you add an add-on to the account's subscription.
 
-image:i_CreditCard.png[] Appears on the Invoice screen and lets you make a payment against that invoice.
+^|image:i_CreditCard.png[]
+|Appears on the Invoice screen and lets you make a payment against that invoice.
 
-image:i_Gears.png[] Appears at the top of the screen (for admin-level users) and gives you access to User, Tenant, and Admin.
+^|image:i_Gears.png[]
+|Appears at the top of the screen (for admin-level users) and gives you access to User, Tenant, and Admin.
+
+|===
 
 === Grids/Tables
 Grids (a.k.a. table) appear throughout Kaui to keep lists organized:
 
 image::GridSample.png[]
 
-At the bottom of some page for some grids, you can use the pagination controls to view different "pages:"
+Below some grids, you can use the pagination controls to view different "pages:"
 
 image::PaginationControls.png[]
 
@@ -147,34 +157,59 @@ image::ClickToViewDetail.png[]
 
 === Basic Search
 
-You can perform a basic search for customer accounts from either of these locations:
+To search for customer accounts, use the basic search. Basic search is available at the top of the screen no matter where you are in Kaui:
 
-Top of the screenshots
+image:ShowTopSearch.png[]
 
-[[screenshot]]
+Basic search is also available in the center of the *homepage*:
 
-Center of the homepage:
+image:ShowSearchHomepage.png[]
 
-[[screenshot]]
+You can search by typing in either the ID or the external key.
+
+*Tip:* To view all accounts, place your cursor in the search field and press the Enter key.
 
 === Advanced Search
-An advanced search can help you find customer account, plus:
 
-* Bundles
-* Invoices
-* Credits
-* Custom fields
-* Invoices
-* Invoice payments
-* Payments
-* Subscriptions
-* Transactions
-* Tags
-* Tag Definitions
+An advanced search can help you find customer account as well as other types of objects in the system, such as invoices, subscriptions, and so forth.
 
+To perform an advanced search:
 
+1. On the homepage, click *Advanced search:*
 
+image:ShowAdvancedSearch.png[]
 
+Kaui displays the Advanced Search popup:
+
+image:AdvancedSearchPopup.png[]
+
+[start=2]
+2. In the *Object type* field, select the object type you want to search for:
+
+image:AdvSearch-ObjectTypeDropdown.png[]
+
+[start=3]
+3. In the *Search for* field, enter the identifier (ID) of the object you're searching for. (_Example:_ If you're searching for a specific invoice, type in the invoice number.)
+
+[NOTE]
+*Note:* In addition to searching with an ID, some object types can be searched for using an external key, such as the customer account.
+
+[start=4]
+4. If you want Kaui to search and display the first record in the search results, click the *Fast search* checkbox.
+
+5. Click the Search button. Kaui displays the search results.
+
+[TIP]
+*Tip:* At the bottom of the Advanced Search popup, Kaui displays the search syntax. You can copy and paste this advanced search syntax into a basic search field. This is helpful if you frequently perform the same kinds of advanced searches.
+
+_Example:_
+
+image:AdvancedSearchSyntax-Labeled.png[]
+
+//QST: Do we have a list of objects that can have external keys? Or is that something that's customizable for Kill Bill?
+//QST: Are "invoice payments" different from "payments?"
+//QST: Can you search with partial IDs or partial external keys? Or does it have to be an exact match?
+//QST: Can you use any wildcard characters in the search box?
 
 == Accounts
 
@@ -210,3 +245,19 @@ Look up tag definitions: killbill.github.io/slate/#account-tags
 
 === Add Contact Email Addresses
 === Close an Account
+
+FAQs
+
+Q: What can I search on with Advanced Search?
+A: You can search on the following object types:
+* Accounts
+* Bundles
+* Credits
+* Custom fields
+* Invoices
+* Invoice payments
+* Payments
+* Subscriptions
+* Transactions
+* Tags
+* Tag Definitions
