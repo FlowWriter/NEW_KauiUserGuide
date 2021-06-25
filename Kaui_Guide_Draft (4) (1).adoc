@@ -16,6 +16,7 @@
 //https://github.com/asciidoctor/asciidoctor.org/blob/main/docs/asciidoc-writers-guide.adoc
 //https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/
 
+== PART 1
 
 == What Is Kaui (KAUI)?
 "Kaui" (KAUI ) stands for Kill (Bill) Admin User Interface. We think "Kaui" is easier on the eyes than "KAUI."
@@ -51,14 +52,37 @@ The screenshots displayed in this guide may differ from what you see on your Kau
 
 == Other Learning Resources
 
+=== Documentation
+
+[[REFERENCE TO YET-TO-BE-CREATED KILL BILL OVERVIEW GUIDE FOR CONCEPTS]]
+
 === Glossary
 
-We don't use exotic words in this manual, but some of the terms may have a slightly different meaning from your previous encounters with them. For that reason, we encourage you to review the following terms in the  _Kill Bill Glossary_:
+Some of the terms may have a slightly different meaning from your previous encounters with them. For that reason, we encourage you to review the following terms in the  _Kill Bill Glossary_:
 
 account | payment method | subscription | tag (advanced) | tenant | user
 
+[[CREATE GLOSSARY DOCUMENT AND DEFINE THESE TERMS]]
+
 === Videos
-We regularly add new overviews and tutorials to https://www.youtube.com/c/KillbillIoOSS[our YouTube videos], so check in regularly.
+We regularly add new overviews and tutorials to https://www.youtube.com/c/KillbillIoOSS[our YouTube videos], so check in from time to time.
+
+== Log In and Log Out
+
+To log in to Kaui, type in your username and password, then select the *Sign In* button.
+
+image:LoginScreen.png[width=650]
+
+If your organization uses more than one Kill Bill tenant, select the tenant from the dropdown and select the *Save* button:
+
+image:ChooseTenant.png[width=650]
+
+[NOTE]
+*Note:* Usernames and passwords are stored in Kill Bill. The method your organization uses to manage users is highly configurable. For information on managing users and permissions, see <<Users, Roles, and Permissions>>
+
+To log out of Kaui, select *SIGN OUT* in the upper right corner of the Kill Bill homepage:
+
+image:SignOut-Labeled.png[width=850]
 
 == Navigate
 This section gets you familiar with the standard features of Kaui's user interface, such as:
@@ -73,7 +97,7 @@ This section gets you familiar with the standard features of Kaui's user interfa
 
 The homepage is the screen that Kaui displays after you first log in.
 
-image::Homepage-Labeled.png[]
+image::Homepage-Labeled.png[width=850]
 
 1. Basic search feature (find customer accounts)
 2. Advanced search feature (find invoices, payments, and more)
@@ -96,7 +120,7 @@ Depending on your user permissions, you might also have access to:
 
 From any screen in Kill Bill, you can return to the homepage by clicking the logo in the upper left corner:
 
-image::killbill_logo_LARGER.png[600,152]
+image::killbill_logo_LARGER.png[width=200]
 
 === Icons
 
@@ -133,7 +157,7 @@ image::killbill_logo_LARGER.png[600,152]
 |===
 
 === Grids/Tables
-Grids (a.k.a. table) appear throughout Kaui to keep lists organized:
+Grids (a.k.a. tables) appear throughout Kaui to keep lists organized:
 
 image::GridSample.png[]
 
@@ -141,29 +165,29 @@ Below some grids, you can use the pagination controls to view different "pages:"
 
 image::PaginationControls.png[80,500]
 
-To sort columns on a grid, clicking the up/down arrow in that column's header:
+To sort columns on a grid, click the up/down arrow in that column's header:
 
-image::ShowSortArrowsOnColumn.png[]
+image::ShowSortArrowsOnColumn.png[width=650]
 
 Kaui shows you which column is currently sorted by the purple arrow:
 
-image::ShowSortByColumn.png[]
+image::ShowSortByColumn.png[width=650]
 
 The direction of the arrow (up or down) indicates if the column is sorted in ascending or descending order.
 
 If relevant, you can click on a link in the grid to view that item's detail. For example, on the Invoices grid, click the link to open that specific invoice:
 
-image::ClickToViewDetail.png[]
+image::ClickToViewDetail.png[width=650]
 
 === Basic Search
 
 To search for customer accounts, use the basic search. Basic search is available at the top of the screen no matter where you are in Kaui:
 
-image:ShowTopSearch.png[]
+image:ShowTopSearch.png[width=850]
 
 Basic search is also available in the center of the *homepage*:
 
-image:ShowSearchHomepage.png[]
+image:ShowSearchHomepage.png[width=850]
 
 You can search by typing in either the ID or the external key.
 
@@ -177,16 +201,16 @@ To perform an advanced search:
 
 1. On the homepage, click *Advanced search:*
 
-image:ShowAdvancedSearch.png[]
+image:ShowAdvancedSearch.png[width=850]
 
 Kaui displays the Advanced Search popup:
 
-image:AdvancedSearchPopup.png[]
+image:AdvancedSearchPopup.png[width=650]
 
 [start=2]
 2. In the *Object type* field, select the object type you want to search for:
 
-image:AdvSearch-ObjectTypeDropdown.png[]
+image:AdvSearch-ObjectTypeDropdown.png[width=650]
 
 [start=3]
 3. In the *Search for* field, enter the identifier (ID) of the object you're searching for. (_Example:_ If you're searching for a specific invoice, type in the invoice number.)
@@ -215,7 +239,7 @@ image:AdvancedSearchSyntax-Labeled.png[]
 
 This section helps you become familiar with customer accounts and the layout of the Account page.
 
-The Account page provides information about a specific customer, such as email address, physical address, and so forth. It is also the central location for the customer's billing informaton, subscriptions, invoices, and payment methods.
+The Account page provides information about a specific customer, such as email address, physical address, and so forth. It is also the central location for the customer's billing information, subscriptions, invoices, and payment methods.
 
 To get to a customer's Account page, use the [[Search feature]].
 
@@ -246,10 +270,12 @@ Look up tag definitions: killbill.github.io/slate/#account-tags
 === Add Contact Email Addresses
 === Close an Account
 
-FAQs
+== FAQs
 
-Q: What can I search on with Advanced Search?
-A: You can search on the following object types:
+*Q:* What can I search on with Advanced Search?
+
+*A:* You can search on the following object types:
+
 * Accounts
 * Bundles
 * Credits
@@ -261,3 +287,11 @@ A: You can search on the following object types:
 * Transactions
 * Tags
 * Tag Definitions
+
+== PART 2
+
+== Users, Roles, and Permissions
+
+either database or third-party integration for storing usernames and passwords
+
+The default "admin" username/password includes all of the roles and permissions available with Kill Bill.
