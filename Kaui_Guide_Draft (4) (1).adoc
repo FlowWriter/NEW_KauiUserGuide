@@ -78,7 +78,9 @@ If your organization uses more than one Kill Bill tenant, select the tenant from
 image:ChooseTenant.png[width=650]
 
 [NOTE]
-*Note:* Usernames and passwords are stored in Kill Bill. The method your organization uses to manage users is highly configurable. For information on managing users and permissions, see <<Users, Roles, and Permissions>>
+*Note:* Usernames and passwords are stored in Kill Bill. The method your organization uses to manage users is highly configurable. For information on managing users and permissions, see <<Users, Roles, and Permissions>>.
+
+//THERE IS A PROBLEM WITH HOW THESE CROSS-REFS APPEAR IN THE PREVIEW; NOT SURE ABOUT HOW IT WILL RENDER.
 
 To log out of Kaui, select *SIGN OUT* in the upper right corner of the Kill Bill homepage:
 
