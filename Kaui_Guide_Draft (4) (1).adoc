@@ -64,10 +64,10 @@ We regularly add new overviews and tutorials to https://www.youtube.com/c/Killbi
 This section gets you familiar with the standard features of Kaui's user interface, such as:
 
 * Homepage layout
+* Icons
 * Basic search
 * Advanced Search
 * Grids/tables
-* Expand/collapse sections
 
 === Homepage Layout
 
@@ -77,7 +77,7 @@ image::Homepage-Labeled.png[]
 
 1. Basic search feature (find customer accounts)
 2. Advanced search feature (find invoices, payments, and more)
-3. Analytics, KPM (Kill Bill Package Manager), and ???
+3. Analytics, KPM (Kill Bill Package Manager), and [[???]]
 4. Tags, Tag Definitions, and Custom Fields
 5. Users, Tenants, and Admin
 6. Username / Tenant name | Signout
@@ -139,7 +139,7 @@ image::GridSample.png[]
 
 Below some grids, you can use the pagination controls to view different "pages:"
 
-image::PaginationControls.png[]
+image::PaginationControls.png[80,500]
 
 To sort columns on a grid, clicking the up/down arrow in that column's header:
 
