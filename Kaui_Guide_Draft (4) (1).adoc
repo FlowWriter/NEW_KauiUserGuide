@@ -18,7 +18,7 @@
 
 == PART 1
 
-== What Is Kaui (KAUI)?
+== What Is Kaui?
 "Kaui" (KAUI ) stands for Kill (Bill) Admin User Interface. We think "Kaui" is easier on the eyes than "KAUI."
 
 Kaui is a user interface for Kill Bill. You can use Kaui to perform all sorts of back office tasks related to customer accounts. You can also use Kaui to perform more advanced tasks.
@@ -60,7 +60,7 @@ The screenshots displayed in this guide may differ from what you see on your Kau
 
 Some of the terms may have a slightly different meaning from your previous encounters with them. For that reason, we encourage you to review the following terms in the  _Kill Bill Glossary_:
 
-account | payment method | subscription | tag (advanced) | tenant | user
+account | external key | payment method | subscription | tag (advanced) | tenant | user
 
 [[CREATE GLOSSARY DOCUMENT AND DEFINE THESE TERMS]]
 
@@ -107,7 +107,7 @@ image::Homepage-Labeled.png[width=850]
 4. Tags, Tag Definitions, and Custom Fields
 5. Users, Tenants, and Admin
 6. Username / Tenant name | Signout
-7. Latest invoices, accounts, and payments (for this tenant)
+7. Latest invoices, accounts, and payments (latest records created for this tenant)
 8. This is Killian, the Kill Bill mascot!
 
 Depending on your user permissions, you might also have access to:
@@ -245,21 +245,43 @@ The Account page provides information about a specific customer, such as email a
 
 To get to a customer's Account page, use the [[Search feature]].
 
+=== Account Page Layout
+
 The Account page has the following sections:
 
+* Sub-menu
 * Account information
 * Personal info
 * Billing info
 * Payment methods
 
+==== Sub-Menu
 
 
 
-For information on changing any of this information, see [Edit an Account].
+==== Account Information
+
+==== Personal Information
+
+==== Billing Information
+
+==== Payment Methods
+
+The following sections explain how to work with accounts.
+
+=== Create an Account
+
+Billing cycle day - For monthly or quarterly subscriptions, what day of the month the invoice is created. Cannot be edited once it is set.
+
+External key - An optional alternate ID for the account. This is helpful if you integrate Kill Bill with another system, such as a CRM, and want to use that system's ID for identification, searching, and so forth. Cannot be edited once it is set.
+
+Time zone - see doc. Cannot be edited once it is set.
+
+Locale - is for translations
+
+Migrated - is to indicate a record that has been migrated into Kill Bill.
 
 
-
-=== Create a New Account
 === View an Account
 Explain related submenus
 === Edit an Account
@@ -270,7 +292,12 @@ Can’t edit Bill Cycle Day, External Key, Time Zone, Currency
 Look up tag definitions: killbill.github.io/slate/#account-tags
 
 === Add Contact Email Addresses
+
 === Close an Account
+Does not delete the account. Customer is no longer a customer. Once closed, the data will be read-only. "Write off unpaid invoices" and "Item Adjust Unpaid Invoices" are mutually exclusive. [[can't just delete the invoice]]
+
+When you choose to write off the invoice, it is removed from Account Receivables.
+
 
 == FAQs
 
