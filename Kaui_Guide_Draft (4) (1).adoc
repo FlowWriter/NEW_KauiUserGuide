@@ -80,7 +80,7 @@ image:ChooseTenant.png[width=650]
 [NOTE]
 *Note:* Usernames and passwords are stored in Kill Bill. The method your organization uses to manage users is highly configurable. For information on managing users and permissions, see <<Users, Roles, and Permissions>>.
 
-//THERE IS A PROBLEM WITH HOW THESE CROSS-REFS APPEAR IN THE PREVIEW; NOT SURE ABOUT HOW IT WILL RENDER.
+//THERE IS A PROBLEM WITH HOW THESE CROSS-REFS APPEAR IN THE PREVIEW; THE BEGINNING OF THE LINKED TEXT IS CUT OFF. NOT SURE ABOUT HOW IT WILL RENDER.
 
 To log out of Kaui, select *SIGN OUT* in the upper right corner of the Kill Bill homepage:
 
@@ -100,6 +100,8 @@ This section gets you familiar with the standard features of Kaui's user interfa
 The homepage is the screen that Kaui displays after you first log in.
 
 image::Homepage-Labeled.png[width=850]
+
+[[THESE ALL NEED TO LINK OUT TO THE RELEVANT SECTION]]
 
 1. Basic search feature (find customer accounts)
 2. Advanced search feature (find invoices, payments, and more)
@@ -243,29 +245,62 @@ This section helps you become familiar with customer accounts and the layout of 
 
 The Account page provides information about a specific customer, such as email address, physical address, and so forth. It is also the central location for the customer's billing information, subscriptions, invoices, and payment methods.
 
-To get to a customer's Account page, use the [[Search feature]].
+To find a customer in the system, use <<Basic Search>> or <<Advanced Search>>. To open the customer account, click on the customer ID in the search results.
+
+The next section explains how the Account page is laid out. To skip this and see the task-based steps, go to <<Creating an Account.>>
 
 === Account Page Layout
 
 The Account page has the following sections:
 
-* Sub-menu
-* Account information
-* Personal info
-* Billing info
-* Payment methods
+image::AccountPage_Labeled.png[]
 
-==== Sub-Menu
+1. Sub-menu
+2. Account information
+3. Personal info
+4. Billing info
+5. Payment methods
+
+=== Account Sub-Menu
+
+The Account sub-menu provides a way to look through different areas of the customer's account: Subscriptions, Invoices, Payments, Timeline, Tags, and Custom Fields.
+
+To see any of these areas, click on the relevant item on the sub-menu. To return to the main Account page, click *Account*.
+
+=== Account Information
+
+This section of the screen displays a summary of the customer's account information, such as their ID, currency, and time zone. To edit this information, click *Edit* next to "Account Information."
+
+In this section, you can also assign a tag to the customer or define the parent account. [[LINK EACH OF THESE TOPICS]]
+
+=== Personal Information
+
+This section of the screen displays a read-only list of the customer's personal contact information.
+
+By default, Personal Information is hidden for GDPR Compliance and customer privacy. To see the information, click *Show/Hide Content*.
+
+=== Billing Info
+
+Here you can perform the following tasks for the customer:
+
+* Pay all invoices
+* Add a credit
+* Create a charge
+
+You can also see a summary of billing information:
+
+* Account balance - Amount of money due on the account, including any account credits.
+* Account credit - Amount of any money owed to the customer.
+* Overdue status - The status of the customer's account that indicates if they are overdue or up-to-date on their invoice payments.
+* Bill cycle day - The day of the month on which the system generates an invoice.
+* Next invoice date - The date on which the system generates the customer's next invoice.
+
+The "Trigger invoice generation" feature lets you generate an invoice, either as a test or in a committed state.
+
+=== Payment Methods
 
 
 
-==== Account Information
-
-==== Personal Information
-
-==== Billing Information
-
-==== Payment Methods
 
 The following sections explain how to work with accounts.
 
@@ -300,6 +335,8 @@ When you choose to write off the invoice, it is removed from Account Receivables
 
 
 == FAQs
+
+//I'm thinking this will get so long that it might be best to make it a separate manual?
 
 *Q:* What can I search on with Advanced Search?
 
