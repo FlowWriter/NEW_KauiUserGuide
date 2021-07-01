@@ -27,9 +27,9 @@ Kaui is a user interface for Kill Bill. You can use Kaui to perform all sorts of
 
 In Kaui, users can  perform basic tasks, such as:
 
-* Creating a customer account
-* Generating a customer invoice
-* Canceling a subscription
+* Create a customer account
+* Generate a customer invoice
+* Cancel a subscription
 
 However, Kaui can also help advanced users perform tasks, for example:
 
@@ -185,6 +185,8 @@ image::ClickToViewDetail.png[width=650]
 
 === Basic Search
 
+*Tip:* To view all accounts, place your cursor in the search field and press the Enter key.
+
 To search for customer accounts, use the basic search. Basic search is available at the top of the screen no matter where you are in Kaui:
 
 image:ShowTopSearch.png[width=850]
@@ -193,9 +195,12 @@ Basic search is also available in the center of the *homepage*:
 
 image:ShowSearchHomepage.png[width=850]
 
-You can search by typing in either the ID or the external key.
+You can search on the following information:
 
-*Tip:* To view all accounts, place your cursor in the search field and press the Enter key.
+* ID
+* External key
+* Name
+* Email address
 
 === Advanced Search
 
@@ -261,25 +266,25 @@ image::AccountPage_Labeled.png[]
 4. Billing info
 5. Payment methods
 
-=== Account Sub-Menu
+==== Account Sub-Menu
 
-The Account sub-menu provides a way to look through different areas of the customer's account: Subscriptions, Invoices, Payments, Timeline, Tags, and Custom Fields.
+The Account sub-menu organizes and provides access to different areas of the customer's account: Subscriptions, Invoices, Payments, Timeline, Tags, and Custom Fields.
 
-To see any of these areas, click on the relevant item on the sub-menu. To return to the main Account page, click *Account*.
+To see these areas, click on the relevant item on the sub-menu. To return to the customer's Account page, click *Account* on the sub-menu.
 
-=== Account Information
+==== Account Information
 
 This section of the screen displays a summary of the customer's account information, such as their ID, currency, and time zone. To edit this information, click *Edit* next to "Account Information."
 
 In this section, you can also assign a tag to the customer or define the parent account. [[LINK EACH OF THESE TOPICS]]
 
-=== Personal Information
+==== Personal Information
 
 This section of the screen displays a read-only list of the customer's personal contact information.
 
 By default, Personal Information is hidden for GDPR Compliance and customer privacy. To see the information, click *Show/Hide Content*.
 
-=== Billing Info
+==== Billing Info
 
 Here you can perform the following tasks for the customer:
 
@@ -297,29 +302,120 @@ You can also see a summary of billing information:
 
 The "Trigger invoice generation" feature lets you generate an invoice, either as a test or in a committed state.
 
-=== Payment Methods
+==== Payment Methods
 
+This section of the Account page lets you:
 
+* Add a payment method
+* Edit existing payment methods
+* Set a payment method as default
+* Perform an auth(orize), charge, or credit against a payment method
+* Delete a payment method
 
+//QST: What is the star icon for?
 
-The following sections explain how to work with accounts.
+==== Account Field Definitions
+
+[cols="1,1"]
+[cols="25h,~"]
+|===
+| Field | Description
+
+| Name
+| The customer's first and last name.
+
+| First name length
+| This field sets the length of the customer's first name. Kill Bill automatically calculates this number based on the location of the space between the first and last name. You can overwrite it with a different number, if necessary.
+
+*Note:* This field gets used if your organization needs to extract customers' first or last names for communication (invoices, emails, etc.). The field lets an organization accommodate variations of names used across the globe.
+
+| External key
+| An optional alternate ID for the account.
+
+*Tip:* The external key feature is helpful if you integrate Kill Bill with another system, such as a CRM, and want to use that system's ID in Kill Bill (for identification, searching, and so forth). Once this is set and saved for the customer, you cannot change it.
+
+| Email
+| The main email address to use for communicating with the customer.
+
+| Billing cycle day
+| For monthly or quarterly subscriptions, what day of the month the invoice is created. Once this is set and saved for the customer, you cannot change it.
+
+| Currency
+| The currency that the customer uses to make purchases.
+
+| Timezone
+| The time zone in which the customer resides. Once this is set and saved for the customer, you cannot change it.
+
+| Locale
+| Indicates the language that Kaui uses to send communication to the customer (invoices, emails, etc.)  If your organizaton communicates with customers in a language that's different than the default language, it's important to select the appropriate locale for the customer. For more information, see https://docs.killbill.io/latest/internationalization.html[the _Internationalization_ manual].
+
+| Address line 1 / Address line 2
+| The street address where the customer resides.
+
+| Zip code
+| The zip code for the area in which the customer resides.
+
+| Company
+| If relevant, the company/organization the customer works for.
+
+| City
+| The city in which the customer resides.
+
+| State
+| The state in which the customer resides.
+
+| Country
+| The country in which the customer resides.
+
+| Phone
+| The customer's phone number.
+
+| Notes
+| Additional information about the account. What you type here is not viewable by the customer.
+
+| Migrated?
+| This field is for informational purposes only. You can check this box if you have migrated this customer account into Kill Bill.
+
+|===
+
+=== Working with Accounts
+
+The following sections explain how to perform the following actions on an account:
+
+* View
+* Edit
+* Create
+* Add tags
+* Add contact email addresses
+* Close
+* Add payment method
+* Change default payment method
+
+//ABOVE WILL BE LINKED
 
 === Create an Account
 
-Billing cycle day - For monthly or quarterly subscriptions, what day of the month the invoice is created. Cannot be edited once it is set.
+1. At the top right of the screen, click *Create New Account*:
 
-External key - An optional alternate ID for the account. This is helpful if you integrate Kill Bill with another system, such as a CRM, and want to use that system's ID for identification, searching, and so forth. Cannot be edited once it is set.
+image::CreateNewAccount-Labeled.png[width=650]
 
-Time zone - see doc. Cannot be edited once it is set.
+[start=2]
+2. Kaui opens the New Account screen:
 
-Locale - is for translations
+image::AddNewAccount.png[width=650]
 
-Migrated - is to indicate a record that has been migrated into Kill Bill.
+[start=3]
+3. Fill in the fields. For field information, see the [[something]] section above.
 
+[start=4]
+4. Click the *Save* button.
 
 === View an Account
+
 Explain related submenus
+
 === Edit an Account
+
 Can’t edit Bill Cycle Day, External Key, Time Zone, Currency
 
 === Add Tag(s) to an Account
