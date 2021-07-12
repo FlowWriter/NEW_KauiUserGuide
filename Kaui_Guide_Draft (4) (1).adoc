@@ -297,6 +297,10 @@ You can also see a summary of billing information:
 * Account balance - Amount of money due on the account, including any account credits.
 * Account credit - Amount of any money owed to the customer.
 * Overdue status - The status of the customer's account that indicates if they are overdue or up-to-date on their invoice payments.
+
+[NOTE]
+*Note:* The account can have a negative account balance, but not be overdue. That's because overdue status depends on invoice due dates and how late payments are defined based on a company's business policy. For example, an invoice may not be overdue if a company allows a 15 day grace period to make a payment.
+
 * Bill cycle day - The day of the month on which the system generates an invoice.
 * Next invoice date - The date on which the system generates the customer's next invoice.
 
@@ -312,9 +316,49 @@ This section of the Account page lets you:
 * Perform an auth(orize), charge, or credit against a payment method
 * Delete a payment method
 
+For more information on payment methods, see [[THIS THAT AND THE OTHER]]
+
 //QST: What is the star icon for?
 
-==== Account Field Definitions
+=== Working with Accounts
+
+
+
+Explain related submenus
+
+
+
+
+The following sections explain how to perform the following actions on an account:
+
+* Create
+* Edit
+* Add tags
+* Add contact email addresses
+* Close
+* Add payment method
+* Change default payment method
+
+//ABOVE WILL BE LINKED
+
+=== Create an Account
+
+1. At the top right of the screen, click *Create New Account*:
+
+image::CreateNewAccount-Labeled.png[width=650]
+
+[start=2]
+2. Kaui opens the New Account screen:
+
+image::AddNewAccount.png[width=650]
+
+[start=3]
+3. Fill in the fields. For field information, see the table in the next section.
+
+[start=4]
+4. Click the *Save* button.
+
+==== Account Field Information
 
 [cols="1,1"]
 [cols="25h,~"]
@@ -378,43 +422,15 @@ This section of the Account page lets you:
 
 |===
 
-=== Working with Accounts
-
-The following sections explain how to perform the following actions on an account:
-
-* View
-* Edit
-* Create
-* Add tags
-* Add contact email addresses
-* Close
-* Add payment method
-* Change default payment method
-
-//ABOVE WILL BE LINKED
-
-=== Create an Account
-
-1. At the top right of the screen, click *Create New Account*:
-
-image::CreateNewAccount-Labeled.png[width=650]
-
-[start=2]
-2. Kaui opens the New Account screen:
-
-image::AddNewAccount.png[width=650]
-
-[start=3]
-3. Fill in the fields. For field information, see the [[something]] section above.
-
-[start=4]
-4. Click the *Save* button.
-
-=== View an Account
-
-Explain related submenus
-
 === Edit an Account
+
+1. Search for the account using basic search or advanced search.
+
+2. On the Account page, next to "Account Information," click *Edit*.
+
+Kaui opens the Update Account screen:
+
+3. STOPPED HERE 
 
 Can’t edit Bill Cycle Day, External Key, Time Zone, Currency
 
