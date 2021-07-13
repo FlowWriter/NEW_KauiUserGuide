@@ -60,7 +60,7 @@ The screenshots displayed in this guide may differ from what you see on your Kau
 
 Some of the terms may have a slightly different meaning from your previous encounters with them. For that reason, we encourage you to review the following terms in the  _Kill Bill Glossary_:
 
-account | external key | payment method | subscription | tag (advanced) | tenant | user
+account | external key | parent | payment method | subscription | tag (advanced) | tenant | user
 
 [[CREATE GLOSSARY DOCUMENT AND DEFINE THESE TERMS]]
 
@@ -374,7 +374,7 @@ image::AddNewAccount.png[width=650]
 *Note:* This field gets used if your organization needs to extract customers' first or last names for communication (invoices, emails, etc.). The field lets an organization accommodate variations of names used across the globe.
 
 | External key
-| An optional alternate ID for the account.
+| An optional alternate ID for the account. Once this is saved for the customer, you cannot change it.
 
 *Tip:* The external key feature is helpful if you integrate Kill Bill with another system, such as a CRM, and want to use that system's ID in Kill Bill (for identification, searching, and so forth). Once this is set and saved for the customer, you cannot change it.
 
@@ -382,13 +382,13 @@ image::AddNewAccount.png[width=650]
 | The main email address to use for communicating with the customer.
 
 | Billing cycle day
-| For monthly or quarterly subscriptions, what day of the month the invoice is created. Once this is set and saved for the customer, you cannot change it.
+| For monthly or quarterly subscriptions, what day of the month the invoice is created. Once this is saved for the customer, you cannot change it.
 
 | Currency
-| The currency that the customer uses to make purchases.
+| The currency that the customer uses to make purchases. Once this is saved for the customer, you cannot change it.
 
 | Timezone
-| The time zone in which the customer resides. Once this is set and saved for the customer, you cannot change it.
+| The time zone in which the customer resides. Once this is saved for the customer, you cannot change it.
 
 | Locale
 | Indicates the language that Kaui uses to send communication to the customer (invoices, emails, etc.)  If your organizaton communicates with customers in a language that's different than the default language, it's important to select the appropriate locale for the customer. For more information, see https://docs.killbill.io/latest/internationalization.html[the _Internationalization_ manual].
@@ -424,21 +424,35 @@ image::AddNewAccount.png[width=650]
 
 === Edit an Account
 
-1. Search for the account using basic search or advanced search.
+You can make changes to account information except for Bill Cycle Day, Currency, External Key, and Time Zone.
 
-2. On the Account page, next to "Account Information," click *Edit*.
+1. Open the account on the Account page.
+2. Next to "Account Information," click *Edit*.
 
 Kaui opens the Update Account screen:
 
-3. STOPPED HERE 
+image::Account_UpdateScreen.png[width=650]
 
-Can’t edit Bill Cycle Day, External Key, Time Zone, Currency
+[start=3]
+3. Make changes to the fields. For field information, see the previous section. [[LINK]]
+
+[NOTE]
+*Note:* You cannot change the following fields: Bill Cycle Day, Currency, External Key, and Time Zone.
+
+[start=4]
+4. Click the *Save* button.
 
 === Add Tag(s) to an Account
 
 Look up tag definitions: killbill.github.io/slate/#account-tags
 
+=== Link to Parent Account
+
+
+
 === Add Contact Email Addresses
+
+
 
 === Close an Account
 Does not delete the account. Customer is no longer a customer. Once closed, the data will be read-only. "Write off unpaid invoices" and "Item Adjust Unpaid Invoices" are mutually exclusive. [[can't just delete the invoice]]
