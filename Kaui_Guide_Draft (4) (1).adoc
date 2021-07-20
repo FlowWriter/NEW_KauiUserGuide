@@ -270,6 +270,8 @@ image::AccountPage_Labeled.png[]
 
 The Account sub-menu organizes and provides access to different areas of the customer's account: Subscriptions, Invoices, Payments, Timeline, Tags, and Custom Fields.
 
+image:Account-Submenu.png[width=650]
+
 To see these areas, click on the relevant item on the sub-menu. To return to the customer's Account page, click *Account* on the sub-menu.
 
 ==== Account Information
@@ -328,22 +330,13 @@ For more information on payment methods, see [[THIS THAT AND THE OTHER]]
 
 //QST: What is the star icon for?
 
-=== Working with Accounts
+The following sections explain how to work with accounts:
 
-
-
-Explain related submenus
-
-
-
-
-The following sections explain how to perform the following actions on an account:
-
-* Create
-* Edit
+* Create an account
+* Edit an account
+* Close an account
 * Assign a tag
 * Define a parent account
-* Close
 * Add payment method
 * Change default payment method
 
@@ -455,6 +448,39 @@ image::Account_UpdateScreen.png[width=650]
 [start=4]
 4. Click the *Save* button.
 
+=== Close an Account
+Use the steps in this section to indicate you will no longer be doing business with a customer. If the customer has unpaid invoices, using the steps below, you can choose to either write off or item-adjust them.
+
+[NOTE]
+*Note:* Closing an account does not delete it. It only indicates the account is no longer a customer of yours. Once you close the account, its data becomes read-only, and you cannot make changes to it.
+
+1. Open the account on the Account page.
+2. Next to "Account Information," click *Close*.
+
+Kaui displays the Close Account pop-up:
+
+image:CloseAccountPopup.png[width=650]
+
+[start=3]
+3. Check the *Name* and *Account ID* fields to ensure you are closing the correct account.
+4. Select any of the following actions:
+
+* *Cancel All Subscriptions*&#8212;Stops any subscriptions that are current for this account.
+
+* *Write Off Unpaid Invoices*&#8212;Brings the balance for all unpaid invoices to zero. When you choose to write off the invoice, it is removed from Account Receivables.
+
+* *Item Adjust Unpaid Invoices*&#8212;Adds an invoice line item with a negative amount to bring each unpaid invoice's balance to zero.
+
+[NOTE]
+*Note:* The last two options are mutually exclusive (i.e., you can only select one of them).
+
+[start=5]
+5. Click the *Close* button.
+
+Kaui displays a message that lets you know the account was closed. In addition, the Account menu displays "Closed":
+
+image:AccountSubmenu-Closed.png[width=650]
+
 === Add Tag(s) to an Account
 
 You can attach a tag to an account as a way of communicating information or to starting/stopping an action. Some examples from the default tags that already exist in the system include:
@@ -504,11 +530,6 @@ image:Account-ParentID-Labeled.png[]
 
 [TIP]
 *Tip:* To open the parent account from the child account, click on the account ID link next to the *Parent* field.
-
-=== Close an Account
-Does not delete the account. Customer is no longer a customer. Once closed, the data will be read-only. "Write off unpaid invoices" and "Item Adjust Unpaid Invoices" are mutually exclusive. [[can't just delete the invoice]]
-
-When you choose to write off the invoice, it is removed from Account Receivables.
 
 
 == FAQs
