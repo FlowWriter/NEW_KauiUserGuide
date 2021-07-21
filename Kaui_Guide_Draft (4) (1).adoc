@@ -56,6 +56,8 @@ The screenshots displayed in this guide may differ from what you see on your Kau
 
 [[REFERENCE TO YET-TO-BE-CREATED KILL BILL OVERVIEW GUIDE FOR CONCEPTS]]
 
+
+
 === Glossary
 
 Some of the terms may have a slightly different meaning from your previous encounters with them. For that reason, we encourage you to review the following terms in the  _Kill Bill Glossary_:
@@ -321,14 +323,14 @@ The "Trigger invoice generation" feature lets you generate an invoice, either as
 This section of the Account page lets you:
 
 * Add a payment method
-* Edit existing payment methods
+* Edit existing payment methods [[I don't think you can do this]]
 * Set a payment method as default
 * Perform an auth(orize), charge, or credit against a payment method
 * Delete a payment method
 
 For more information on payment methods, see [[THIS THAT AND THE OTHER]]
 
-//QST: What is the star icon for?
+//QST: What is the star icon for? Default account?
 
 The following sections explain how to work with accounts:
 
@@ -495,12 +497,12 @@ To add a tag to a customer account:
 1. Open the account on the Account page.
 2. In the "Account Information" section, click the tag icon in the upper left corner:
 
-image:AccountInfo-Section-Labeled.png[]
+image:AccountInfo-Section-Labeled.png[width=650]
 
 [start=3]
 3. Select the checkboxes of the tags you want to assign to the account.
 
-image:Account-TagDropdown.png[]
+image:Account-TagDropdown.png[width=650]
 
 [start=4]
 4. Click the *Update* button to save your changes.
@@ -526,11 +528,126 @@ image:LinkToParentPopup.png[width=650]
 [start=6]
 6. Click the *Save* button. Kaui displays the parent account ID as a link in the "Account Information" section.
 
-image:Account-ParentID-Labeled.png[]
+image:Account-ParentID-Labeled.png[width=650]
 
 [TIP]
 *Tip:* To open the parent account from the child account, click on the account ID link next to the *Parent* field.
 
+=== Add Payment Method
+
+A customer account can have several payment methods to allow making payments in  different ways, such as credit cards, debit cards, PayPal, and so forth. The payment method includes the details needed for Kill Bill to process a payment against an invoice. (For more information about payment methods, see )
+
+Saving this information in Kaui makes it easier for you to accept payments from the customer, because the customer does not have to repeatedly give you their payment method details.
+
+[TIP]
+*Tip:* If you set a payment method as the default, Kill Bill will automatically process any open invoices for the account.
+
+[[mention something about how it's saved as a token and not actual data?]]
+
+To add a payment method for a customer:
+
+1. Open the account on the Account page.
+2. Next to "Payment Methods," click the plus sign:
+
+image:PaymentMethods-PlusSign-Labeled.png[width=650]
+
+Kaui displays the Add New Payment Method screen:
+
+image:AddPaymentMethodScreen.png[width=650]
+
+[start=3]
+3. Fill in the fields. For field information, see the table in the next section.
+4. Click the *Save* button.
+
+
+==== Payment Method Field Information
+
+[cols="1,1"]
+[cols="25h,~"]
+|===
+| Field | Description
+
+| External key
+| An optional alternate ID for the payment method. Once this is saved for the customer, you cannot change it.
+
+| Plugin name
+| The name of the plugin that is associated with this type of payment method. [[QST: Need more info here. If multiple plugins exist, would this be a dropdown or will they have to type it in?]]
+
+| Card type
+| The name of the credit or debit card.
+
+| Card holder name
+| The name that appears on the card.
+
+| Expiration month Expiration year
+| The month and year the card expires. Enter month as _mm_ and year as _yy_. (_Examples:_ 07 for the month of July and 23 for the year 2023.)
+
+| Credit card number
+| The credit card number, typed without dashes.
+
+| Address 1, Address 2, City, ZIP code, State, Country
+| The billing address associated with this card.
+
+| Add Property (Name/Value)
+| Use this area to assign custom fields and values to the payment method.
+
+*Note:* Custom fields are an advanced feature. For more information, see Part 2.
+
+| Default payment method?
+| Check this box to set this payment method as the default. Kill Bill uses the default payment method to automatically pay invoices.
+
+*Note:* If you forget to select this box, you can set the payment method as the default by clicking the star icon next to the payment method on the Account page:
+
+image:PaymentMethodStar-Labeled.png[width=350]
+
+|===
+
+[[QST: All the payment method fields are credit/debit card specific. What happens if the business supports ACH or PayPal or something else?]]
+
+=== View Payment Method Details
+
+Although you cannot edit a payment method once it is created, you can view its details:
+
+1. Open the account on the Account page.
+2. In the Payment Methods area, click the gray down arrow ( image:i_GrayDownArrow.png[] ) next to the payment method.
+
+Kaui expands the details for the payment method:
+
+image:PaymentMethod-Expanded.png[width=650]
+
+=== Delete a Payment Method
+
+[WARNING]
+*Warning:* Kaui does not ask you to confirm your deletion; use this feature with caution.
+
+To delete a payment method:
+
+1. Open the account on the Account page.
+2. In the Payment Methods area, click the red X ( image:i_RedX.png[] ) next to the payment method. Kaui _immediately_ removes the payment method.
+
+
+== Charges, Refunds, and Invoices
+
+=== Create Charge
+
+=== Create Refund
+
+=== Create Invoice
+
+Also Authorize, Purchase, Credit
+
+Authorize
+Capture
+Chargeback
+Credit
+Purchase
+Refund
+Void
+
+
+
+
+//________________________________________________//
 
 == FAQs
 
