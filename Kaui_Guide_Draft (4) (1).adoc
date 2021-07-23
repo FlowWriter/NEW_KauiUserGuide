@@ -80,7 +80,7 @@ If your organization uses more than one Kill Bill tenant, select the tenant from
 image:ChooseTenant.png[width=650]
 
 [NOTE]
-*Note:* Usernames and passwords are stored in Kill Bill. The method your organization uses to manage users is highly configurable. For information on managing users and permissions, see <<Users, Roles, and Permissions>>.
+*Note:* Authentication is handled by Kill Bill. The method your organization uses to manage users is highly configurable. For information on managing users and permissions, see <<Users, Roles, and Permissions>>.
 
 //THERE IS A PROBLEM WITH HOW THESE CROSS-REFS APPEAR IN THE PREVIEW; THE BEGINNING OF THE LINKED TEXT IS CUT OFF. NOT SURE ABOUT HOW IT WILL RENDER.
 
@@ -107,7 +107,7 @@ image::Homepage-Labeled.png[width=850]
 
 1. Basic search feature (find customer accounts)
 2. Advanced search feature (find invoices, payments, and more)
-3. Analytics, KPM (Kill Bill Package Manager), and [[???]]
+3. Plugin specific screens, e.g. Analytics (reporting), Deposit (record wire transfers), KPM (Kill Bill Package Manager).
 4. Tags, Tag Definitions, and Custom Fields
 5. Users, Tenants, and Admin
 6. Username / Tenant name | Signout
@@ -149,7 +149,7 @@ image::killbill_logo_LARGER.png[width=200]
 |If you see this at the top of the screen, it gives you access to Tags, Tag Definitions, and Custom Fields. Otherwise, when you see this in other areas, it means you can select a tag to apply to the current object (for example, an account).
 
 ^|image:i_Plug.png[]
-|Appears at the top of the screen and gives you access to Analytics, KPM (Kill Bill Package Manager), and ???.
+|Appears at the top of the screen and gives you access to plugin specific screens.
 
 ^|image:i_Addon.png[]
 |Appears on the Subscription screen and lets you add an add-on to the account's subscription.
@@ -311,7 +311,7 @@ You can also see a summary of billing information:
 * Overdue status - The status of the customer's account that indicates if they are overdue or up-to-date on their invoice payments.
 
 [NOTE]
-*Note:* The account can have a negative account balance, but not be overdue. That's because overdue status depends on invoice due dates and how late payments are defined based on a company's business policy. For example, an invoice may not be overdue if a company allows a 15 day grace period to make a payment.
+*Note:* The account can have a negative account balance, but not be overdue. That's because overdue status depends on invoice due dates and how late payments are defined based on a company's business policy. For example, an invoice may not be overdue if a company allows a 15 day grace period (aka NET terms) to make a payment.
 
 * Bill cycle day - The day of the month on which the system generates an invoice.
 * Next invoice date - The date on which the system generates the customer's next invoice.
@@ -323,10 +323,12 @@ The "Trigger invoice generation" feature lets you generate an invoice, either as
 This section of the Account page lets you:
 
 * Add a payment method
-* Edit existing payment methods [[I don't think you can do this]]
 * Set a payment method as default
 * Perform an auth(orize), charge, or credit against a payment method
 * Delete a payment method
+
+[NOTE]
+*Note:* These operations are directly applied on the payment instrument: payments wouldn't be applied to the unpaid invoices for instnace. Additionally, credit here refers to depositing funds directly to the customer card (unrelated to account credits).
 
 For more information on payment methods, see [[THIS THAT AND THE OTHER]]
 
@@ -424,7 +426,7 @@ image::AddNewAccount.png[width=650]
 | This field is for informational purposes only. You can check this box if you have migrated this customer account into Kill Bill.
 
 | Contact email addresses
-| Email addresses to be used in addition to the Email address specified above. The email addresses listed here (separated by ???) will receive the same emails as the main Email address.
+| Email addresses to be used in addition to the Email address specified above. The email addresses listed here (separated by ???) will receive the same emails as the main Email address. [[ THIS IS A SEPARATE SCREEN / FLOW? ]]
 
 |===
 
@@ -571,7 +573,7 @@ image:AddPaymentMethodScreen.png[width=650]
 | An optional alternate ID for the payment method. Once this is saved for the customer, you cannot change it.
 
 | Plugin name
-| The name of the plugin that is associated with this type of payment method. [[QST: Need more info here. If multiple plugins exist, would this be a dropdown or will they have to type it in?]]
+| The name of the plugin that is associated with this type of payment method. [[QST: Need more info here. If multiple plugins exist, would this be a dropdown or will they have to type it in?]] [[ Would need to type it in ]]
 
 | Card type
 | The name of the credit or debit card.
@@ -604,6 +606,7 @@ image:PaymentMethodStar-Labeled.png[width=350]
 
 [[QST: All the payment method fields are credit/debit card specific. What happens if the business supports ACH or PayPal or something else?]]
 
+[[ Good question: In real life, payment method details aren't added on this page (especially because of PCI compliance) -- they are added on the back-end, via gateway specific flows. This is really mostly for testing. ]]
 === View Payment Method Details
 
 Although you cannot edit a payment method once it is created, you can view its details:
