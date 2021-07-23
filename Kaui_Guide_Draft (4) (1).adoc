@@ -56,9 +56,7 @@ The screenshots displayed in this guide may differ from what you see on your Kau
 
 Some of the terms may have a slightly different meaning from your previous encounters with them. For that reason, we encourage you to review the following terms in the  _Kill Bill Glossary_:
 
-account | external key | parent | payment method | subscription | tag (advanced) | tenant | user
-
-[[CREATE GLOSSARY DOCUMENT AND DEFINE THESE TERMS]]
+Account | External Key | Parent | Payment Method | Subscription | Tag | Tenant | User
 
 === Videos
 We regularly add new overviews and tutorials to https://www.youtube.com/c/KillbillIoOSS[our YouTube videos], so check in from time to time.
