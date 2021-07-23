@@ -61,7 +61,7 @@ Account | External Key | Parent | Payment Method | Subscription | Tag | Tenant |
 === Videos
 We regularly add new overviews and tutorials to https://www.youtube.com/c/KillbillIoOSS[our YouTube videos], so check in from time to time.
 
-== Log In and Log Out
+== Log In and Log Out [[log_in_and_log_out]]
 
 To log in to Kaui, type in your username and password, then select the *Sign In* button.
 
@@ -72,9 +72,7 @@ If your organization uses more than one Kill Bill tenant, select the tenant from
 image:ChooseTenant.png[width=650]
 
 [NOTE]
-*Note:* Authentication is handled by Kill Bill. The method your organization uses to manage users is highly configurable. For information on managing users and permissions, see <<Users, Roles, and Permissions>>.
-
-//THERE IS A PROBLEM WITH HOW THESE CROSS-REFS APPEAR IN THE PREVIEW; THE BEGINNING OF THE LINKED TEXT IS CUT OFF. NOT SURE ABOUT HOW IT WILL RENDER.
+*Note:* Authentication is handled by Kill Bill. The method your organization uses to manage users is highly configurable. For information on managing users and permissions, see <<users_roles_permissions>>.
 
 To log out of Kaui, select *SIGN OUT* in the upper right corner of the Kill Bill homepage:
 
@@ -83,11 +81,11 @@ image:SignOut-Labeled.png[width=850]
 == Navigate
 This section gets you familiar with the standard features of Kaui's user interface, such as:
 
-* Homepage layout
-* Icons
-* Basic search
-* Advanced Search
-* Grids/tables
+* <<_homepage_layout>>
+* <<_icons>>
+* <<_basic_search>>
+* <<_advanced_search>>
+* <<grids_tables>>
 
 === Homepage Layout
 
@@ -97,22 +95,16 @@ image::Homepage-Labeled.png[width=850]
 
 [[THESE ALL NEED TO LINK OUT TO THE RELEVANT SECTION]]
 
-1. Basic search feature (find customer accounts)
-2. Advanced search feature (find invoices, payments, and more)
+1. <<_basic_search>> (find customer accounts)
+2. <<_advanced_search>> (find invoices, payments, and more)
 3. Plugin specific screens, e.g. Analytics (reporting), Deposit (record wire transfers), KPM (Kill Bill Package Manager).
-4. Tags, Tag Definitions, and Custom Fields
-5. Users, Tenants, and Admin
-6. Username / Tenant name | Signout
+4. Tags, Tag Definitions, and Custom Fields*
+5. Users, Tenants, and Admin*
+6. Username / Tenant name | <<log_in_and_log_out,Signout>>
 7. Latest invoices, accounts, and payments (latest records created for this tenant)
 8. This is Killian, the Kill Bill mascot!
 
-Depending on your user permissions, you might also have access to:
-
-* Tags
-* Custom fields
-* Kill Bill Package/Plugin Manager
-* Analytics
-* Admin settings for users and tenants
+\*Indicates advanced features you may or may not have access to, depending on your user permissions.
 
 === Return to Homepage
 
@@ -154,7 +146,7 @@ image::killbill_logo_LARGER.png[width=200]
 
 |===
 
-=== Grids/Tables
+=== Grids/Tables [[grids_tables]]
 Grids (a.k.a. tables) appear throughout Kaui to keep lists organized:
 
 image::GridSample.png[]
@@ -233,11 +225,6 @@ _Example:_
 
 image:AdvancedSearchSyntax-Labeled.png[]
 
-//QST: Do we have a list of objects that can have external keys? Or is that something that's customizable for Kill Bill?
-//QST: Are "invoice payments" different from "payments?"
-//QST: Can you search with partial IDs or partial external keys? Or does it have to be an exact match?
-//QST: Can you use any wildcard characters in the search box?
-
 == Accounts
 
 This section helps you become familiar with customer accounts and the layout of the Account page.
@@ -246,7 +233,7 @@ The Account page provides information about a specific customer, such as email a
 
 To find a customer in the system, use <<Basic Search>> or <<Advanced Search>>. To open the customer account, click on the customer ID in the search results.
 
-The next section explains how the Account page is laid out. To skip this and see the task-based steps, go to <<Creating an Account.>>
+The next section explains how the Account page is laid out. To skip this and see the task-based steps, go to <<Create an Account.>>
 
 === Account Page Layout
 
@@ -272,7 +259,7 @@ To see these areas, click on the relevant item on the sub-menu. To return to the
 
 This section of the screen displays a summary of the customer's account information, such as their ID, currency, and time zone. To edit this information, click *Edit* next to "Account Information."
 
-Here you can performt he following tasks for the customer account:
+Here you can perform the following tasks for the customer account:
 
 * Edit an account
 * Define a parent account
@@ -308,7 +295,7 @@ You can also see a summary of billing information:
 * Bill cycle day - The day of the month on which the system generates an invoice.
 * Next invoice date - The date on which the system generates the customer's next invoice.
 
-The "Trigger invoice generation" feature lets you generate an invoice, either as a test or in a committed state.
+The *Trigger invoice generation* feature lets you generate an invoice, either as a test or in a committed state.
 
 ==== Payment Methods
 
@@ -666,7 +653,7 @@ Void
 
 == PART 2
 
-== Users, Roles, and Permissions
+== Users, Roles, and Permissions [[users_roles_permissions]]
 
 either database or third-party integration for storing usernames and passwords
 
