@@ -43,7 +43,7 @@ These are just a handful of the tasks you can accomplish with Kaui. For a full l
 
 *Part 1* explains how Kaui is organized and how to perform basic customer service tasks, such as creating accounts, invoices, and so forth. It’s appropriate for back office staff, such as those working in customer service, product management, and finance.
 
-To quickly find what you're looking for, you can use the _Table of Contents_ or our *FAQs*.
+To quickly find what you're looking for, you can use the _Table of Contents_ or our <<FAQs>> section.
 
 *Part 2* explains advanced features of Kaui, for example: customer fields, tags, extensions, and more. It’s appropriate for Kill Bill administrators and software developers.
 
@@ -51,12 +51,6 @@ To quickly find what you're looking for, you can use the _Table of Contents_ or 
 The screenshots displayed in this guide may differ from what you see on your Kaui screen. That's because your user permissions control what features you can access (i.e., what you see on the screen).
 
 == Other Learning Resources
-
-=== Documentation
-
-[[REFERENCE TO YET-TO-BE-CREATED KILL BILL OVERVIEW GUIDE FOR CONCEPTS]]
-
-
 
 === Glossary
 
@@ -311,7 +305,7 @@ You can also see a summary of billing information:
 * Overdue status - The status of the customer's account that indicates if they are overdue or up-to-date on their invoice payments.
 
 [NOTE]
-*Note:* The account can have a negative account balance, but not be overdue. That's because overdue status depends on invoice due dates and how late payments are defined based on a company's business policy. For example, an invoice may not be overdue if a company allows a 15 day grace period (aka NET terms) to make a payment.
+*Note:* The account can have a negative account balance, but not be overdue. That's because overdue status depends on invoice due dates and how late payments are defined based on a company's business policy. For example, an invoice may not be overdue if a company allows a 15-day grace period (a.k.a. NET terms) to make a payment.
 
 * Bill cycle day - The day of the month on which the system generates an invoice.
 * Next invoice date - The date on which the system generates the customer's next invoice.
