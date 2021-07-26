@@ -104,7 +104,7 @@ image::Homepage-Labeled.png[width=850]
 7. Latest invoices, accounts, and payments (latest records created for this tenant)
 8. This is Killian, the Kill Bill mascot!
 
-\*Indicates advanced features you may or may not have access to, depending on your user permissions.
+*Indicates advanced features you may or may not have access to, depending on your user permissions.
 
 === Return to Homepage
 
@@ -233,7 +233,7 @@ The Account page provides information about a specific customer, such as email a
 
 To find a customer in the system, use <<Basic Search>> or <<Advanced Search>>. To open the customer account, click on the customer ID in the search results.
 
-The next section explains how the Account page is laid out. To skip this and see the task-based steps, go to <<Create an Account.>>
+The next section explains how the Account page is laid out. To skip this and see the task-based steps, go to <<Create an Account>>.
 
 === Account Page Layout
 
@@ -249,7 +249,16 @@ image::AccountPage_Labeled.png[]
 
 ==== Account Sub-Menu
 
-The Account sub-menu organizes and provides access to different areas of the customer's account: Subscriptions, Invoices, Payments, Timeline, Tags, and Custom Fields.
+The Account sub-menu organizes and provides access to different areas of the customer's account:
+
+* Subscriptions
+* Invoices
+* Payments
+* Timeline
+* Tags*
+* Custom Fields*
+
+*Tags and custom fields are advanced features and documented in Part 3 of the documentation.
 
 image:Account-Submenu.png[width=650]
 
@@ -431,6 +440,15 @@ image::Account_UpdateScreen.png[width=650]
 [start=4]
 4. Click the *Save* button.
 
+=== View the Account Timeline
+
+The billing timeline shows all the events that occurred for a specific user account:
+
+Account Timeline: visualize all the events through time associated with the account and allow specific filtering (subscription, event type, …​)
+
+[[STOPPED HERE]]
+
+
 === Close an Account
 Use the steps in this section to indicate you will no longer be doing business with a customer. If the customer has unpaid invoices, using the steps below, you can choose to either write off or item-adjust them.
 
@@ -586,6 +604,7 @@ image:PaymentMethodStar-Labeled.png[width=350]
 [[QST: All the payment method fields are credit/debit card specific. What happens if the business supports ACH or PayPal or something else?]]
 
 [[ Good question: In real life, payment method details aren't added on this page (especially because of PCI compliance) -- they are added on the back-end, via gateway specific flows. This is really mostly for testing. ]]
+
 === View Payment Method Details
 
 Although you cannot edit a payment method once it is created, you can view its details:
@@ -607,27 +626,33 @@ To delete a payment method:
 1. Open the account on the Account page.
 2. In the Payment Methods area, click the red X ( image:i_RedX.png[] ) next to the payment method. Kaui _immediately_ removes the payment method.
 
+//________________________________________________//
 
-== Charges, Refunds, and Invoices
-
-=== Create Charge
-
-=== Create Refund
-
-=== Create Invoice
-
-Also Authorize, Purchase, Credit
-
-Authorize
-Capture
-Chargeback
-Credit
-Purchase
-Refund
-Void
+== Subscriptions
 
 
 
+//________________________________________________//
+
+== Invoices
+
+[[How to view invoices]]
+
+//________________________________________________//
+
+== Payments
+
+=== Charges, Refunds, and Invoices
+
+==== Create Charge
+
+==== Create Refund
+
+==== Create Invoice
+
+==== Authorize, Capture, Purchase, Chargeback, Credit, Void? [[Some are listed under the specific payment method on the Accounts > Payment Methods]]
+
+[[How to view/interpret the timeline. What it shows.]]
 
 //________________________________________________//
 
@@ -651,6 +676,8 @@ Void
 * Tags
 * Tag Definitions
 
+//________________________________________________//
+
 == PART 2
 
 == Users, Roles, and Permissions [[users_roles_permissions]]
@@ -658,3 +685,11 @@ Void
 either database or third-party integration for storing usernames and passwords
 
 The default "admin" username/password includes all of the roles and permissions available with Kill Bill.
+
+//________________________________________________//
+
+== PART 3
+
+== Tags
+
+== Custom Fields
