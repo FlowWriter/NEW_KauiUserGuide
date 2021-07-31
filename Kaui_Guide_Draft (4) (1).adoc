@@ -243,8 +243,8 @@ image::AccountPage_Labeled.png[]
 
 1. Sub-menu
 2. Account information
-3. Personal info
-4. Billing info
+3. Billing info
+4. Personal info
 5. Payment methods
 
 ==== Account Sub-Menu
@@ -270,11 +270,11 @@ This section of the screen displays a summary of the customer's account informat
 
 Here you can perform the following tasks for the customer account:
 
-* Edit an account
-* Define a parent account
-* Assign a tag
+* <<_edit_an_account>>
+* <<_link_to_parent_account>>
+* <<_add_a_tag_to_an_account>>
 
-In this section, you can also assign a tag to the customer or define the parent account. [[LINK EACH OF THESE TOPICS]]
+In this section, you can also assign a tag to the customer or define the parent account.
 
 ==== Personal Information
 
@@ -282,7 +282,7 @@ This view-only section of the screen displays a read-only list of the customer's
 
 By default, Personal Information is hidden for GDPR Compliance and customer privacy. To see the information, click *Show/Hide Content*.
 
-To edit this information, see the "Edit an Account" section. [[LINK]]
+To edit this information, see the <<_edit_an_account>> section.
 
 ==== Billing Info
 
@@ -482,7 +482,7 @@ Kaui displays a message that lets you know the account was closed. In addition, 
 
 image:AccountSubmenu-Closed.png[width=650]
 
-=== Add Tag(s) to an Account
+=== Add a Tag to an Account
 
 You can attach a tag to an account as a way of communicating information or to starting/stopping an action. Some examples from the default tags that already exist in the system include:
 
@@ -645,6 +645,30 @@ To delete a payment method:
 === Charges, Refunds, and Invoices
 
 ==== Create Charge
+
+Creating a charge in Kaui creates a new invoice. To create a charge:
+
+1. On the Account page, click *Create Charge* at the top of the Billing Info section.
+
+image::AddCredit-Labeled.png[width=650]
+
+Kaui opens the Add New Charge pop-up:
+
+image::AddNewChargePopup.png[width=650]
+
+[start=2]
+2. To set the invoice as a draft instead of immediately committing it, uncheck the *Auto-commit* box and enter the amount of the charge.
+
+[NOTE]
+*Note:* Currency defaults from the customer account and should not need to be changed
+
+[start=3]
+3. The *Description* field and *Comments* field are optional. What you type here displays on the customer's invoice.
+
+4. Click *Save* and Kaui generates an invoice.
+5. If you unchecked the *Auto-commit* box, you can click *Commit* if necessary.
+
+If you do not commit the invoice, it will stay in Draft mode. You can commit it by opening it on the Invoices page and clicking *Commit*. [[CHECK]]
 
 ==== Create Refund
 
