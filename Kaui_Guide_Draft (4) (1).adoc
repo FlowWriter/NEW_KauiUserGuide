@@ -65,18 +65,18 @@ We regularly add new overviews and tutorials to https://www.youtube.com/c/Killbi
 
 To log in to Kaui, type in your username and password, then select the *Sign In* button.
 
-image:LoginScreen.png[width=650]
+image::LoginScreen.png[width=650]
 
 If your organization uses more than one Kill Bill tenant, select the tenant from the dropdown and select the *Save* button:
 
-image:ChooseTenant.png[width=650]
+image::ChooseTenant.png[width=650]
 
 [NOTE]
 *Note:* Authentication is handled by Kill Bill. The method your organization uses to manage users is highly configurable. For information on managing users and permissions, see <<users_roles_permissions>>.
 
 To log out of Kaui, select *SIGN OUT* in the upper right corner of the Kill Bill homepage:
 
-image:SignOut-Labeled.png[width=850]
+image::SignOut-Labeled.png[width=850]
 
 == Navigate
 This section gets you familiar with the standard features of Kaui's user interface, such as:
@@ -115,7 +115,7 @@ image::killbill_logo_LARGER.png[width=200]
 === Icons
 
 [cols="1,1"]
-[cols="25h,~"]
+[cols="10h,~"]
 |===
 ^|image:i_PlusGreen.png[]
 |Appears where you can add an item, such as a payment method, credit, charge, etc.
@@ -175,11 +175,11 @@ image::ClickToViewDetail.png[width=650]
 
 To search for customer accounts, use the basic search. Basic search is available at the top of the screen no matter where you are in Kaui:
 
-image:ShowTopSearch.png[width=850]
+image::ShowTopSearch.png[width=850]
 
 Basic search is also available in the center of the *homepage*:
 
-image:ShowSearchHomepage.png[width=850]
+image::ShowSearchHomepage.png[width=850]
 
 You can search on the following information:
 
@@ -196,16 +196,16 @@ To perform an advanced search:
 
 1. On the homepage, click *Advanced search:*
 
-image:ShowAdvancedSearch.png[width=850]
+image::ShowAdvancedSearch.png[width=850]
 
 Kaui displays the Advanced Search popup:
 
-image:AdvancedSearchPopup.png[width=650]
+image::AdvancedSearchPopup.png[width=650]
 
 [start=2]
 2. In the *Object type* field, select the object type you want to search for:
 
-image:AdvSearch-ObjectTypeDropdown.png[width=650]
+image::AdvSearch-ObjectTypeDropdown.png[width=650]
 
 [start=3]
 3. In the *Search for* field, enter the identifier (ID) of the object you're searching for. (_Example:_ If you're searching for a specific invoice, type in the invoice number.)
@@ -223,7 +223,7 @@ image:AdvSearch-ObjectTypeDropdown.png[width=650]
 
 _Example:_
 
-image:AdvancedSearchSyntax-Labeled.png[]
+image::AdvancedSearchSyntax-Labeled.png[]
 
 == Accounts
 
@@ -239,15 +239,15 @@ The next section explains how the Account page is laid out. To skip this and see
 
 The Account page has the following sections:
 
-image::AccountPage_Labeled.png[]
-
 1. Sub-menu
 2. Account information
 3. Billing info
 4. Personal info
 5. Payment methods
 
-==== Account Sub-Menu
+image::AccountPage_Labeled.png[]
+
+*1. Account Sub-Menu*
 
 The Account sub-menu organizes and provides access to different areas of the customer's account:
 
@@ -260,11 +260,11 @@ The Account sub-menu organizes and provides access to different areas of the cus
 
 *Tags and custom fields are advanced features and documented in Part 3 of the documentation.
 
-image:Account-Submenu.png[width=650]
+image::Account-Submenu.png[width=650]
 
 To see these areas, click on the relevant item on the sub-menu. To return to the customer's Account page, click *Account* on the sub-menu.
 
-==== Account Information
+*2. Account Information*
 
 This section of the screen displays a summary of the customer's account information, such as their ID, currency, and time zone. To edit this information, click *Edit* next to "Account Information."
 
@@ -276,7 +276,7 @@ Here you can perform the following tasks for the customer account:
 
 In this section, you can also assign a tag to the customer or define the parent account.
 
-==== Personal Information
+*3. Personal Information*
 
 This view-only section of the screen displays a read-only list of the customer's personal contact information.
 
@@ -284,7 +284,7 @@ By default, Personal Information is hidden for GDPR Compliance and customer priv
 
 To edit this information, see the <<_edit_an_account>> section.
 
-==== Billing Info
+*4. Billing Info*
 
 Here you can perform the following tasks for the customer:
 
@@ -306,33 +306,21 @@ You can also see a summary of billing information:
 
 The *Trigger invoice generation* feature lets you generate an invoice, either as a test or in a committed state.
 
-==== Payment Methods
+*5. Payment Methods*
 
 This section of the Account page lets you:
 
-* Add a payment method
+* <<_add_payment_method>>
 * Set a payment method as default
-* Perform an auth(orize), charge, or credit against a payment method
 * Delete a payment method
+* Perform an auth(orize), charge, or credit against a payment method
 
 [NOTE]
-*Note:* These operations are directly applied on the payment instrument: payments wouldn't be applied to the unpaid invoices for instnace. Additionally, credit here refers to depositing funds directly to the customer card (unrelated to account credits).
+*Note:* The auth, charge, and credit operations are directly applied on the payment instrument (as opposed to being applied to the unpaid invoice). Additionally, "credit" here refers to depositing funds directly to the customer card and is unrelated to account credits.
 
-For more information on payment methods, see [[THIS THAT AND THE OTHER]]
+For more information on payment methods, see the <<_payment_methods>> section.
 
-//QST: What is the star icon for? Default account?
-
-The following sections explain how to work with accounts:
-
-* Create an account
-* Edit an account
-* Close an account
-* Assign a tag
-* Define a parent account
-* Add payment method
-* Change default payment method
-
-//ABOVE WILL BE LINKED
+[[QST: What is the star icon for? Default account?]]
 
 === Create an Account
 
@@ -444,10 +432,11 @@ image::Account_UpdateScreen.png[width=650]
 
 The billing timeline shows all the events that occurred for a specific user account:
 
-Account Timeline: visualize all the events through time associated with the account and allow specific filtering (subscription, event type, …​)
+The top two dropdown fields let you filter the events by subscription bundle or by event type.
 
-[[STOPPED HERE]]
+In the Details column, you can click on payment and invoice links to open the associated document.
 
+image::TimelinePage.png[]
 
 === Close an Account
 Use the steps in this section to indicate you will no longer be doing business with a customer. If the customer has unpaid invoices, using the steps below, you can choose to either write off or item-adjust them.
@@ -460,7 +449,7 @@ Use the steps in this section to indicate you will no longer be doing business w
 
 Kaui displays the Close Account pop-up:
 
-image:CloseAccountPopup.png[width=650]
+image::CloseAccountPopup.png[width=650]
 
 [start=3]
 3. Check the *Name* and *Account ID* fields to ensure you are closing the correct account.
@@ -480,7 +469,7 @@ image:CloseAccountPopup.png[width=650]
 
 Kaui displays a message that lets you know the account was closed. In addition, the Account menu displays "Closed":
 
-image:AccountSubmenu-Closed.png[width=650]
+image::AccountSubmenu-Closed.png[width=650]
 
 === Add a Tag to an Account
 
@@ -496,12 +485,12 @@ To add a tag to a customer account:
 1. Open the account on the Account page.
 2. In the "Account Information" section, click the tag icon in the upper left corner:
 
-image:AccountInfo-Section-Labeled.png[width=650]
+image::AccountInfo-Section-Labeled.png[width=650]
 
 [start=3]
 3. Select the checkboxes of the tags you want to assign to the account.
 
-image:Account-TagDropdown.png[width=650]
+image::Account-TagDropdown.png[width=650]
 
 [start=4]
 4. Click the *Update* button to save your changes.
@@ -514,11 +503,11 @@ When you link an account to a _parent_ account, the account becomes a _child_ ac
 2. Open the account that will become the child account.
 3. Next to the *Parent* field, click the plus sign icon in the "Account Information" section:
 
-image:Account-ParentField-Labeled.png[width=650]
+image::Account-ParentField-Labeled.png[width=650]
 
 Kaui opens a popup:
 
-image:LinkToParentPopup.png[width=650]
+image::LinkToParentPopup.png[width=650]
 
 [start=4]
 4. Click in the *Parent account id* field and paste in the Account ID that you copied in step 1.
@@ -527,12 +516,16 @@ image:LinkToParentPopup.png[width=650]
 [start=6]
 6. Click the *Save* button. Kaui displays the parent account ID as a link in the "Account Information" section.
 
-image:Account-ParentID-Labeled.png[width=650]
+image::Account-ParentID-Labeled.png[width=650]
 
 [TIP]
 *Tip:* To open the parent account from the child account, click on the account ID link next to the *Parent* field.
 
-=== Add Payment Method
+=== Payment Methods
+
+In production systems, payment method information is typically added via gateway-specific data flows. However, you can use this Payment Method section for testing purposes. For PCI compliance, _do not_ enter any genuine payment information in these fields.
+
+==== Add Payment Method
 
 A customer account can have several payment methods to allow making payments in  different ways, such as credit cards, debit cards, PayPal, and so forth. The payment method includes the details needed for Kill Bill to process a payment against an invoice. (For more information about payment methods, see )
 
@@ -548,18 +541,17 @@ To add a payment method for a customer:
 1. Open the account on the Account page.
 2. Next to "Payment Methods," click the plus sign:
 
-image:PaymentMethods-PlusSign-Labeled.png[width=650]
+image::PaymentMethods-PlusSign-Labeled.png[width=650]
 
 Kaui displays the Add New Payment Method screen:
 
-image:AddPaymentMethodScreen.png[width=650]
+image::AddPaymentMethodScreen.png[width=650]
 
 [start=3]
 3. Fill in the fields. For field information, see the table in the next section.
 4. Click the *Save* button.
 
-
-==== Payment Method Field Information
+===== Payment Method Field Information
 
 [cols="1,1"]
 [cols="25h,~"]
@@ -597,15 +589,11 @@ image:AddPaymentMethodScreen.png[width=650]
 
 *Note:* If you forget to select this box, you can set the payment method as the default by clicking the star icon next to the payment method on the Account page:
 
-image:PaymentMethodStar-Labeled.png[width=350]
+image::PaymentMethodStar-Labeled.png[width=350]
 
 |===
 
-[[QST: All the payment method fields are credit/debit card specific. What happens if the business supports ACH or PayPal or something else?]]
-
-[[ Good question: In real life, payment method details aren't added on this page (especially because of PCI compliance) -- they are added on the back-end, via gateway specific flows. This is really mostly for testing. ]]
-
-=== View Payment Method Details
+==== View Payment Method Details
 
 Although you cannot edit a payment method once it is created, you can view its details:
 
@@ -614,9 +602,67 @@ Although you cannot edit a payment method once it is created, you can view its d
 
 Kaui expands the details for the payment method:
 
-image:PaymentMethod-Expanded.png[width=650]
+image::PaymentMethod-Expanded.png[width=650]
 
-=== Delete a Payment Method
+==== Apply Auth, Charge, or Credit to a Payment Method
+
+[NOTE]
+*Note:* The auth, charge, and credit operations are directly applied on the payment instrument (as opposed to being applied to the unpaid invoice). Additionally, "credit" here refers to depositing funds directly to the customer card and is unrelated to account credits.
+
+1. Open the account on the Account page.
+2. In the Payment Methods area, click the gray down arrow ( image:i_GrayDownArrow.png[] ) next to the payment method.
+[start=3]
+3. Select the type of transaction you want to perform:
+
+image::Payment_Method-Transactions.png[width=650]
+
+Kaui displays the Process Transaction screen:
+
+image::ProcessTransaction.png[width=650]
+
+[start=4]
+4. Fill in the fields. For field information, see the following section.
+5. Click the *Save* button. Kaui saves the transaction and displays it on the Payments page.
+
+==== Process Transaction Field Information
+
+[[STOPPED HERE]]
+
+[cols="1,1"]
+[cols="35h,~"]
+|===
+| Field | Description
+
+| Transaction type
+| From the dropdown list, select the type of transaction you want to perform.
+
+| Amount
+| The amount of the transaction.
+
+| Currency
+| The currency used for the transaction. This field defaults from the customer account.
+
+| Payment key
+| The unique payment key (ID) to which you want to apply the transaction. [[Looked in API doc and didn't see payment key/id listed there. ]]
+
+|Transaction key
+| The unique transaction key (ID) to which you want to apply this transaction. [[Relevant only for charges and/or credits?]]
+
+| Reason
+| stuff
+
+| Comment
+| stuff
+
+| Add control plugin
+| stuff
+
+| Add property
+| [[FOR MORE INFO: https://killbill.github.io/slate/#payment-method]]
+
+|===
+
+==== Delete Payment Method
 
 [WARNING]
 *Warning:* Kaui does not ask you to confirm your deletion; use this feature with caution.
@@ -668,7 +714,7 @@ image::AddNewChargePopup.png[width=650]
 4. Click *Save* and Kaui generates an invoice.
 5. If you unchecked the *Auto-commit* box, you can click *Commit* if necessary.
 
-If you do not commit the invoice, it will stay in Draft mode. You can commit it by opening it on the Invoices page and clicking *Commit*. [[CHECK]]
+If you do not commit the invoice, it will stay in Draft mode. You can commit it by opening it from the Invoices page and clicking *Commit*. [[CHECK]]
 
 ==== Create Refund
 
