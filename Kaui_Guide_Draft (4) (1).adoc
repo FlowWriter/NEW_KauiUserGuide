@@ -626,15 +626,23 @@ image::ProcessTransaction.png[width=650]
 
 ==== Process Transaction Field Information
 
-[[STOPPED HERE]]
-
 [cols="1,1"]
 [cols="35h,~"]
 |===
 | Field | Description
 
 | Transaction type
-| From the dropdown list, select the type of transaction you want to perform.
+a| From the dropdown list, select the type of transaction you want to perform.
+
+You can choose from the following:
+
+* Authorize
+* Capture
+* Chargeback
+* Credit
+* Purchase (i.e., charge)
+* Refund
+* Void
 
 | Amount
 | The amount of the transaction.
