@@ -604,7 +604,9 @@ Kaui expands the details for the payment method:
 
 image::PaymentMethod-Expanded.png[width=650]
 
-==== Apply Auth, Charge, or Credit to a Payment Method
+==== Apply Auth, Charge, Credit (and Other Transactions) to a Payment Method
+
+This section explains how to specify and process a transaction that's applied to a payment method.
 
 [NOTE]
 *Note:* The auth, charge, and credit operations are directly applied on the payment instrument (as opposed to being applied to the unpaid invoice). Additionally, "credit" here refers to depositing funds directly to the customer card and is unrelated to account credits.
@@ -651,10 +653,21 @@ You can choose from the following:
 | The currency used for the transaction. This field defaults from the customer account.
 
 | Payment key
-| The unique payment key (ID) to which you want to apply the transaction. [[Looked in API doc and didn't see payment key/id listed there. ]]
+| The unique payment key (ID) to which you want to apply the transaction. This field is required for every transaction type _except_ Auth, Credit, and Purchase.
+
+*Note 1:* You can copy the payment key for a specific transaction from the *External Key* column of the Payments page. Or you can copy it from the URL displayed in your browser's address. See the following example. [[PROBABLY NEED TO REWRITE THIS TO MAKE THIS AN INITIAL STEP IF CREATING A TRANSACTION THAT AFFECTS ANOTHER TRANSACTION.]]
+
+ _Example:_
+ In the URL displayed below, `0d1e11e5-2df6-4b6b-992f-e9ff2de38cef` is the payment key.
+
+ `https://demo.killbill.io/accounts/cb736a4f-9b56-4074-ae07-1d37b37cb69f/payments/0d1e11e5-2df6-4b6b-992f-e9ff2de38cef`
 
 |Transaction key
-| The unique transaction key (ID) to which you want to apply this transaction. [[Relevant only for charges and/or credits?]]
+| Kill Bill automatically generates an external transaction key for Auth, Purchase, and Credit transactions.
+
+To process a transaction that requires the transaction key, open the payment detail from the Payments screen and copy the key from the *Transaction External Key* column.
+
+image:TransactionKey-Labeled.png[width=650]
 
 | Reason
 | stuff
