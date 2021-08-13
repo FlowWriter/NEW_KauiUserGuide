@@ -772,7 +772,6 @@ image::AddNewChargePopup.png[width=650]
 
 [start=3]
 3. The *Description* field and *Comments* field are optional. What you type here displays on the customer's invoice.
-
 4. Click *Save* and Kaui generates an invoice.
 5. If you unchecked the *Auto-commit* box, you can click *Commit* if necessary.
 
