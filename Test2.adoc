@@ -100,7 +100,7 @@ image::Homepage-Labeled.png[width=850]
 3. Plugin specific screens, e.g. Analytics (reporting), Deposit (record wire transfers), KPM (Kill Bill Package Manager).
 4. Tags, Tag Definitions, and Custom Fields*
 5. Users, Tenants, and Admin*
-6. Username / Tenant name  <<log_in_and_log_out,Signout>>
+6. Username / Tenant name | <<log_in_and_log_out,Signout>>
 7. Latest invoices, accounts, and payments (latest records created for this tenant)
 8. This is Killian, the Kill Bill mascot!
 
@@ -116,7 +116,7 @@ image::killbill_logo_LARGER.png[width=200]
 
 [cols="^1,3"]
 |===
-|Icon |Description
+| Icon | Description
 
 |image:i_PlusGreen.png[]
 |Appears where you can add an item, such as a payment method, credit, charge, etc.
@@ -327,69 +327,6 @@ image::AddNewAccount.png[width=650]
 
 ==== Account Field Information
 
-[cols="1,3"]
-|===
-|Field |Description
-
-|Name
-|The customer's first and last name.
-
-|First name length
-|This field sets the length of the customer's first name. Kill Bill automatically calculates this number based on the location of the space between the first and last name. You can overwrite it with a different number, if necessary.
-
-*Note:* This field gets used if your organization needs to extract customers' first or last names for communication (invoices, emails, etc.). The field lets an organization accommodate variations of names used across the globe.
-
-|External key
-|An optional alternate ID for the account. Once this is saved for the customer, you cannot change it.
-
-*Tip:* The external key feature is helpful if you integrate Kill Bill with another system, such as a CRM, and want to use that system's ID in Kill Bill (for identification, searching, and so forth). Once this is set and saved for the customer, you cannot change it.
-
-|Email
-|The main email address to use for communicating with the customer.
-
-|Billing cycle day
-|For monthly or quarterly subscriptions, what day of the month the invoice is created. Once this is saved for the customer, you cannot change it.
-
-|Currency
-|The currency that the customer uses to make purchases. Once this is saved for the customer, you cannot change it.
-
-|Timezone
-|The time zone in which the customer resides. Once this is saved for the customer, you cannot change it.
-
-|Locale
-|Indicates the language that Kaui uses to send communication to the customer (invoices, emails, etc.)  If your organizaton communicates with customers in a language that's different than the default language, it's important to select the appropriate locale for the customer. For more information, see https://docs.killbill.io/latest/internationalization.html[the _Internationalization_ manual].
-
-|Address line 1 / Address line 2
-|The street address where the customer resides.
-
-|Zip code
-|The zip code for the area in which the customer resides.
-
-|Company
-|If relevant, the company/organization the customer works for.
-
-|City
-|The city in which the customer resides.
-
-|State
-|The state in which the customer resides.
-
-|Country
-|The country in which the customer resides.
-
-|Phone
-|The customer's phone number.
-
-|Notes
-|Additional information about the account. What you type here is not viewable by the customer.
-
-|Migrated?
-|This field is for informational purposes only. You can check this box if you have migrated this customer account into Kill Bill.
-
-|Contact email addresses
-|Email addresses to be used in addition to the Email address specified above. The email addresses listed here (separated by ???) will receive the same emails as the main Email address. [ THIS IS A SEPARATE SCREEN / FLOW? ]
-|===
-
 //QST: For "contact email addresses," is the definition correct? Also, how do you separate multiple contact email addresses? Comma, space, hard line break?
 
 === Edit an Account
@@ -509,44 +446,6 @@ image::AddPaymentMethodScreen.png[width=650]
 
 ===== Payment Method Field Information
 
-[cols="1,3"]
-|===
-|Field |Description
-
-|External key
-|An optional alternate ID for the payment method. Once this is saved for the customer, you cannot change it.
-
-|Plugin name
-|Type in the name of the plugin that is associated with this type of payment method.
-
-|Card type
-|The name of the credit or debit card.
-
-|Card holder name
-|The name that appears on the card.
-
-|Expiration month Expiration year
-|The month and year the card expires. Enter month as _mm_ and year as _yy_. (_Examples:_ 07 for the month of July and 23 for the year 2023.)
-
-|Credit card number
-|The credit card number, typed without dashes.
-
-|Address 1, Address 2, City, ZIP code, State, Country
-|The billing address associated with this card.
-
-|Add property (Name/Value)
-|Use this area to assign custom fields and values to the payment method.
-
-*Note:* Custom fields are an advanced feature. For more information, see Part 2.
-
-|Default payment method?
-|Check this box to set this payment method as the default. Kill Bill uses the default payment method to automatically pay invoices.
-
-*Note:* If you forget to select this box, you can set the payment method as the default by clicking the star icon next to the payment method on the Account page:
-
-image:PaymentMethodStar-Labeled.png[width=350]
-
-|===
 
 ==== View Payment Method Details
 
@@ -587,54 +486,6 @@ image::ProcessTransaction.png[width=650]
 
 ==== Process Transaction Field Information
 
-[cols="1,3"]
-|===
-|Field |Description
-
-|Transaction type
-|From the dropdown list, select the type of transaction you want to perform.
-
-You can choose from the following:
-* Authorize
-* Capture
-* Chargeback
-* Credit
-* Purchase (i.e., charge)
-* Refund
-* Void
-
-|Amount
-|The amount of the transaction.
-
-|Currency
-|The currency used for the transaction. This field defaults from the customer account.
-
-|Payment key
-|The unique payment key (ID) to which you want to apply the transaction. This field is required for every transaction type _except_ Auth, Credit, and Purchase.
-
-*Note 1:* You can copy the payment key for a specific transaction from the *External Key* column of the Payments page. Or you can copy it from the URL displayed in your browser's address. See the following example. [[PROBABLY NEED TO REWRITE THIS TO MAKE THIS AN INITIAL STEP IF CREATING A TRANSACTION THAT AFFECTS ANOTHER TRANSACTION.]]
-
- _Example:_
- In the URL displayed below, `0d1e11e5-2df6-4b6b-992f-e9ff2de38cef` is the payment key.
- `https://demo.killbill.io/accounts/cb736a4f-9b56-4074-ae07-1d37b37cb69f/payments/0d1e11e5-2df6-4b6b-992f-e9ff2de38cef`
-
-|Transaction key
-|Kill Bill automatically generates an external transaction key for Auth, Purchase, and Credit transactions.
-To process a transaction that requires the transaction key, open the payment detail from the Payments screen and copy the key from the *Transaction External Key* column.
-
-image:TransactionKey-Labeled.png[width=350]
-
-|Reason and Comment
-|The text you enter for Reason and Comment displays on the Timeline page.
-
-|Add control plugin
-|For information on control plugins, see Part 2.
-
-|Add property (Name/Value)
-|Use this area to assign custom fields and values to the transaction.
-
-*Note:* Custom fields are an advanced feature. For more information, see Part 2.
-|===
 
 ==== Delete Payment Method
 
