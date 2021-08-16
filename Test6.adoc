@@ -3,15 +3,22 @@ To perform an advanced search:
 1. On the homepage, click *Advanced search:*
 
 image::ShowAdvancedSearch.png[width=850]
+
 Kaui displays the Advanced Search popup:
-image::AdvancedSearchPopup.png[width=650]
+
+image::AdvancedSearchPopup.png[width=450]
+
 [start=2]
-2. In the *Object type* field, select the object type you want to search for:
-image::AdvSearch-ObjectTypeDropdown.png[width=650]
+. In the *Object type* field, select the object type you want to search for:
+
+image::AdvSearch-ObjectTypeDropdown.png[width=450]
+
 [start=3]
-3. In the *Search for* field, enter the identifier (ID) of the object you're searching for. (_Example:_ If you're searching for a specific invoice, type in the invoice number.)
+. In the *Search for* field, enter the identifier (ID) of the object you're searching for. (_Example:_ If you're searching for a specific invoice, type in the invoice number.)
+
 [NOTE]
 *Note:* In addition to searching with an ID, some object types can be searched for using an external key, such as the customer account.
+
 [start=4]
-4. If you want Kaui to search and display the first record in the search results, click the *Fast search* checkbox.
-5. Click the Search button. Kaui displays the search results.
+. If you want Kaui to search and display the first record in the search results, click the *Fast search* checkbox.
+. Click the Search button. Kaui displays the search results.
