@@ -19,7 +19,7 @@
 == PART 1
 
 == What Is Kaui?
-"Kaui" (KAUI ) stands for Kill (Bill) Admin User Interface. We think "Kaui" is easier on the eyes than "KAUI."
+"Kaui" (KAUI) stands for Kill (Bill) Admin User Interface.
 
 Kaui is a user interface for Kill Bill. You can use Kaui to perform all sorts of back office tasks related to customer accounts. You can also use Kaui to perform more advanced tasks.
 
@@ -37,15 +37,19 @@ However, Kaui can also help advanced users perform tasks, for example:
 * Managing Kill Bill users
 * Creating tags or custom fields
 
-These are just a handful of the tasks you can accomplish with Kaui. For a full list, see the Table of Contents at the beginning of this guide.
+These are just a handful of the tasks you can accomplish with Kaui. For a full list, see the _Table of Contents_ at the beginning of this guide.
 
 == How to Use This Guide
 
-*Part 1* explains how Kaui is organized and how to perform basic customer service tasks, such as creating accounts, invoices, and so forth. It’s appropriate for back office staff, such as those working in customer service, product management, and finance.
+<<_part_1>> explains how Kaui is organized
 
-To quickly find what you're looking for, you can use the _Table of Contents_ or our <<FAQs>> section.
+<<_part_2>> explains how to perform the basic tasks for administering customer accounts, such as creating accounts, invoices, and so forth. It’s appropriate for back office staff, such as those working in customer service, product management, and finance.
 
-*Part 2* explains advanced features of Kaui, for example: customer fields, tags, extensions, and more. It’s appropriate for Kill Bill administrators and software developers.
+<<_part_3>> explains how to create and manage users as well as users roles and permissions. It’s appropriate for Kill Bill administrators and software developers.
+
+<<_part_4>> covers the advanced features of custom fields, tags and more.
+
+The <<faqs>> are great if you have a basic question like, "How do I create an invoice?"
 
 === About Screenshots
 The screenshots displayed in this guide may differ from what you see on your Kaui screen. That's because your user permissions control what features you can access (i.e., what you see on the screen).
@@ -575,7 +579,7 @@ image::AddPaymentMethodScreen.png[width=450]
 |Add property (Name/Value)
 |Use this area to assign custom fields and values to the payment method.
 
-*Note:* Custom fields are an advanced feature. For more information, see Part 2.
+*Note:* Custom fields are an advanced feature. For more information, see <<_part_4>>.
 
 |Default payment method?
 |Check this box to set this payment method as the default. Kill Bill uses the default payment method to automatically pay invoices.
@@ -669,7 +673,7 @@ image:TransactionKey-Labeled.png[width=350]
 |The text you enter for Reason and Comment displays on the Timeline page.
 
 |Add control plugin
-|For information on control plugins, see Part 2.
+|For information on control plugins, see <<_part_4>>.
 
 |Add property (Name/Value)
 |Use this area to assign custom fields and values to the transaction.
@@ -771,7 +775,25 @@ If you do not commit the invoice, it will stay in Draft mode. You can commit it 
 
 //________________________________________________//
 
-== FAQs
+== PART 2
+
+== Users, Roles, and Permissions [[users_roles_permissions]]
+
+either database or third-party integration for storing usernames and passwords
+
+The default "admin" username/password includes all of the roles and permissions available with Kill Bill.
+
+//________________________________________________//
+
+== PART 3
+
+== Tags
+
+== Custom Fields
+
+//________________________________________________//
+
+== FAQs [[faqs]]
 
 //I'm thinking this will get so long that it might be best to make it a separate manual?
 
@@ -790,21 +812,3 @@ If you do not commit the invoice, it will stay in Draft mode. You can commit it 
 * Transactions
 * Tags
 * Tag Definitions
-
-//________________________________________________//
-
-== PART 2
-
-== Users, Roles, and Permissions [[users_roles_permissions]]
-
-either database or third-party integration for storing usernames and passwords
-
-The default "admin" username/password includes all of the roles and permissions available with Kill Bill.
-
-//________________________________________________//
-
-== PART 3
-
-== Tags
-
-== Custom Fields
