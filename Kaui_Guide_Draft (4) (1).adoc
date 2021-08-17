@@ -54,20 +54,22 @@ The <<faqs>> are great if you have a basic question like, "How do I create an in
 === About Screenshots
 The screenshots displayed in this guide may differ from what you see on your Kaui screen. That's because your user permissions control what features you can access (i.e., what you see on the screen).
 
+If you have any questions about why your Kaui screen doesn't match what you see in this guide, ask your Kaui administrator.
+
 == Other Learning Resources
 
 === Glossary
 
-Some of the terms may have a slightly different meaning from your previous encounters with them. For that reason, we encourage you to review the following terms in the  _Kill Bill Glossary_:
+For terms specific to Kill Bill, we encourage you to review the following terms in the  _Kill Bill Glossary_:
 
 Account | External Key | Parent | Payment Method | Subscription | Tag | Tenant | User
 
 === Videos
 We regularly add new overviews and tutorials to https://www.youtube.com/c/KillbillIoOSS[our YouTube videos], so check in from time to time.
 
-== Log In and Log Out [[log_in_and_log_out]]
+== Sign In and Sign Out [[log_in_and_log_out]]
 
-To log in to Kaui, type in your username and password, then select the *Sign In* button.
+To sign in to Kaui, type in your username and password, then select the *Sign In* button.
 
 image::LoginScreen.png[width=450]
 
@@ -87,9 +89,9 @@ This section gets you familiar with the standard features of Kaui's user interfa
 
 * <<_homepage_layout>>
 * <<_icons>>
+* <<grids_tables>>
 * <<_basic_search>>
 * <<_advanced_search>>
-* <<grids_tables>>
 
 === Homepage Layout
 
@@ -101,14 +103,14 @@ image::Homepage-Labeled.png[width=650]
 
 1. <<_basic_search>> (find customer accounts)
 2. <<_advanced_search>> (find invoices, payments, and more)
-3. Plugin specific screens, e.g. Analytics (reporting), Deposit (record wire transfers), KPM (Kill Bill Package Manager).
-4. Tags, Tag Definitions, and Custom Fields*
-5. Users, Tenants, and Admin*
-6. Username / Tenant name  <<log_in_and_log_out,Signout>>
+3. Plugin specific screens (e.g., analytics (reporting), deposits (record wire transfers), KPM (Kill Bill Package Manager)
+4. <<_part_4,Tags, Tag Definitions, and Custom Fields>>
+5. Users, Tenants, and Admin
+6. Username / Tenant name and  <<log_in_and_log_out,Sign Out>>
 7. Latest invoices, accounts, and payments (latest records created for this tenant)
 8. This is Killian, the Kill Bill mascot!
 
-*Indicates advanced features you may or may not have access to, depending on your user permissions.
+*Advanced features you may or may not have access to, depending on your user permissions.
 
 === Return to Homepage
 
@@ -227,6 +229,10 @@ image::AdvSearch-ObjectTypeDropdown.png[width=450]
 _Example:_
 
 image::AdvancedSearchSyntax-Labeled.png[]
+
+//________________________________________________//
+
+== PART 2
 
 == Accounts
 
@@ -678,7 +684,7 @@ image:TransactionKey-Labeled.png[width=350]
 |Add property (Name/Value)
 |Use this area to assign custom fields and values to the transaction.
 
-*Note:* Custom fields are an advanced feature. For more information, see Part 2.
+*Note:* Custom fields are an advanced feature. For more information, see <<_part_3>>.
 |===
 
 ==== Delete Payment Method
@@ -775,7 +781,7 @@ If you do not commit the invoice, it will stay in Draft mode. You can commit it 
 
 //________________________________________________//
 
-== PART 2
+== PART 3
 
 == Users, Roles, and Permissions [[users_roles_permissions]]
 
@@ -785,7 +791,7 @@ The default "admin" username/password includes all of the roles and permissions 
 
 //________________________________________________//
 
-== PART 3
+== PART 4
 
 == Tags
 
