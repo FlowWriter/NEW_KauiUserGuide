@@ -60,6 +60,8 @@ If you have any questions about why your Kaui screen doesn't match what you see 
 
 === Glossary
 
+// FIND OUT HOW TO LINK ACROSS DOCUMENTS
+
 For terms specific to Kill Bill, we encourage you to review the following terms in the  _Kill Bill Glossary_:
 
 Account | External Key | Parent | Payment Method | Subscription | Tag | Tenant | User
@@ -128,7 +130,7 @@ image::killbill_logo_LARGER.png[width=200]
 |Appears where you can add an item, such as a payment method, credit, charge, etc.
 
 |image:i_InvoiceGen.png[]
-|Appears on the Account page and triggers an invoice generation.
+|Appears on the Account page. Clicking it manually triggers a committed or dry-run invoice.
 
 |image:i_DownArrow.png[]
 |Expand a section or dropdown menu.
@@ -137,7 +139,9 @@ image::killbill_logo_LARGER.png[width=200]
 |Collapse a section.
 
 |image:i_Tag.png[]
-|If you see this at the top of the screen, it gives you access to Tags, Tag Definitions, and Custom Fields. Otherwise, when you see this in other areas, it means you can select a tag to apply to the current object (for example, an account).
+|_Admin-level feature:_ On the home page, click to access Tags, Tag Definitions, and Custom Fields.
+
+_All users:_ In other locations in Kaui, click to select a tag to apply to the current object (for example, an account).
 
 |image:i_Plug.png[]
 |Appears at the top of the screen and gives you access to plugin specific screens.
@@ -146,18 +150,18 @@ image::killbill_logo_LARGER.png[width=200]
 |Appears on the Subscription screen and lets you add an add-on to the account's subscription.
 
 |image:i_CreditCard.png[]
-|Appears on the Invoice screen and lets you make a payment against that invoice.
+|Appears on the Invoice screen and lets you make a payment against the invoice.
 
 |image:i_Gears.png[]
-|Appears at the top of the screen (for admin-level users) and gives you access to User, Tenant, and Admin.
+|_Admin level feature:_ Appears at the top of the screen and gives you access to Users, Tenants, and Admin.
 |===
 
 === Grids/Tables [[grids_tables]]
-Grids (a.k.a. tables) appear throughout Kaui to keep lists organized:
+Grids (also referred to as _tables_) appear throughout Kaui to keep lists organized:
 
 image::GridSample.png[]
 
-Below some grids, you can use the pagination controls to view different "pages:"
+For very large grids, use the pagination controls to view different "pages:"
 
 image::PaginationControls.png[80,500]
 
@@ -177,26 +181,39 @@ image::ClickToViewDetail.png[width=450]
 
 === Basic Search
 
+[TIP]
 *Tip:* To view all accounts, place your cursor in the search field and press the Enter key.
 
 To search for customer accounts, use the basic search. Basic search is available at the top of the screen no matter where you are in Kaui:
 
 image::ShowTopSearch.png[width=650]
 
-Basic search is also available in the center of the *homepage*:
-
-image::ShowSearchHomepage.png[width=650]
-
-You can search on the following information:
+You can also search on the following information:
 
 * ID
 * External key
 * Name
 * Email address
 
+Basic search is also available in the center of the *homepage*:
+
+image::ShowSearchHomepage.png[width=650]
+
 === Advanced Search
 
-An advanced search can help you find customer account as well as other types of objects in the system, such as invoices, subscriptions, and so forth.
+An advanced search can help you find customer account information as well as other types of objects in the system:
+
+* Bundle
+* Invoice
+* Credit
+* Custom field
+* Invoice payment
+* Invoice
+* Payment
+* Subscription
+* Transaction
+* Tag
+* Tag definition
 
 To perform an advanced search:
 
@@ -221,7 +238,7 @@ image::AdvSearch-ObjectTypeDropdown.png[width=450]
 
 [start=4]
 . If you want Kaui to search and display the first record in the search results, click the *Fast search* checkbox.
-. Click the Search button. Kaui displays the search results.
+. Click the *Search* button. Kaui displays the search results.
 
 [TIP]
 *Tip:* At the bottom of the Advanced Search popup, Kaui displays the search syntax. You can copy and paste this advanced search syntax into a basic search field. This is helpful if you frequently perform the same kinds of advanced searches.
@@ -264,10 +281,8 @@ The Account sub-menu organizes and provides access to different areas of the cus
 * Invoices
 * Payments
 * Timeline
-* Tags*
-* Custom Fields*
-
-*Tags and custom fields are advanced features and documented in Part 3 of the documentation.
+* Tags
+* Custom Fields
 
 image::Account-Submenu.png[width=450]
 
@@ -283,13 +298,11 @@ Here you can perform the following tasks for the customer account:
 * <<_link_to_parent_account>>
 * <<_add_a_tag_to_an_account>>
 
-In this section, you can also assign a tag to the customer or define the parent account.
-
 *3. Personal Information*
 
 This view-only section of the screen displays a read-only list of the customer's personal contact information.
 
-By default, Personal Information is hidden for GDPR Compliance and customer privacy. To see the information, click *Show/Hide Content*.
+By default, Personal Information details are hidden for GDPR Compliance and customer privacy. To see the information, click *Show/Hide Content*.
 
 To edit this information, see the <<_edit_an_account>> section.
 
@@ -301,17 +314,32 @@ Here you can perform the following tasks for the customer:
 * Add a credit
 * Create a charge
 
+//LINK THE ABOVE LATER
+
 You can also see a summary of billing information:
 
-* Account balance - Amount of money due on the account, including any account credits.
-* Account credit - Amount of any money owed to the customer.
-* Overdue status - The status of the customer's account that indicates if they are overdue or up-to-date on their invoice payments.
+[cols="1,3"]
+|===
+|Field |Description
 
-[NOTE]
+|Account balance
+|Amount of money due on the account, including any account credits.
+
+|Account credit
+|Amount of any money owed to the customer.
+
+|Overdue status
+|The status of the customer's account that indicates if they are overdue or up-to-date on their invoice payments.
+
 *Note:* The account can have a negative account balance, but not be overdue. That's because overdue status depends on invoice due dates and how late payments are defined based on a company's business policy. For example, an invoice may not be overdue if a company allows a 15-day grace period (a.k.a. NET terms) to make a payment.
 
-* Bill cycle day - The day of the month on which the system generates an invoice.
-* Next invoice date - The date on which the system generates the customer's next invoice.
+|Bill cycle day
+|The day of the month on which the system generates an invoice.
+
+|Next invoice date
+|The date on which the system generates the customer's next invoice.
+
+|===
 
 The *Trigger invoice generation* feature lets you generate an invoice, either as a test or in a committed state.
 
@@ -529,6 +557,17 @@ image::Account-ParentID-Labeled.png[width=450]
 
 In production systems, payment method information is typically added via gateway-specific data flows. However, you can use this Payment Method section for testing purposes. For PCI compliance, _do not_ enter any genuine payment information in these fields.
 
+==== Set a Payment Method as the Default
+
+Kill Bill uses the default payment method to automatically pay invoices (whether that invoice is generated by the system or manually by a user).
+
+To set a payment method as the default:
+
+1. Open the account on the Account page.
+2. In the Payment Methods section, click the star icon next to the relevant payment method:
+
+image:PaymentMethodStar-Labeled.png[width=350]
+
 ==== Add Payment Method
 
 A customer account can have several payment methods to allow making payments in  different ways, such as credit cards, debit cards, PayPal, and so forth. The payment method includes the details needed for Kill Bill to process a payment against an invoice. (For more information about payment methods, see )
@@ -588,7 +627,8 @@ image::AddPaymentMethodScreen.png[width=450]
 *Note:* Custom fields are an advanced feature. For more information, see <<_part_4>>.
 
 |Default payment method?
-|Check this box to set this payment method as the default. Kill Bill uses the default payment method to automatically pay invoices.
+|Check this box to set this payment method as the default. Kill Bill uses the default payment method to automatically pay invoices (whether that invoice is generated by the system or manually by a user).
+
 
 *Note:* If you forget to select this box, you can set the payment method as the default by clicking the star icon next to the payment method on the Account page:
 
