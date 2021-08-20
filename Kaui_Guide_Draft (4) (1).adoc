@@ -300,7 +300,7 @@ Here you can perform the following tasks for the customer account:
 
 *3. Personal Information*
 
-This view-only section of the screen displays a read-only list of the customer's personal contact information.
+This section of the screen displays the customer's personal contact information (read only).
 
 By default, Personal Information details are hidden for GDPR Compliance and customer privacy. To see the information, click *Show/Hide Content*.
 
@@ -347,28 +347,23 @@ The *Trigger invoice generation* feature lets you generate an invoice, either as
 
 This section of the Account page lets you:
 
-* <<_add_payment_method>>
-* Set a payment method as default
-* Delete a payment method
-* Perform an auth(orize), charge, or credit against a payment method
-
-[NOTE]
-*Note:* The auth, charge, and credit operations are directly applied on the payment instrument (as opposed to being applied to the unpaid invoice). Additionally, "credit" here refers to depositing funds directly to the customer card and is unrelated to account credits.
+* <<_add_payment_method,Add a payment method>>
+* <<_set_a_payment_method_as_the_default,Set a payment method as default>>
+* <<_delete_payment_method,Delete a payment method>>
+* <<_applying_transactions_to_a_payment_method,Apply a transaction to a payment method (authorize, charge, credit, etc.)>>
 
 For more information on payment methods, see the <<_payment_methods>> section.
-
-[QST: What is the star icon for? Default account?]
 
 === Create an Account
 
 1. At the top right of the screen, click *Create New Account*:
 
-image::CreateNewAccount-Labeled.png[width=450]
+image::CreateNewAccount-Labeled.png[width=550]
 
 [start=2]
 . Kaui opens the New Account screen:
 
-image::AddNewAccount.png[width=450]
+image::AddNewAccount.png[width=550]
 
 [start=3]
 . Fill in the fields. For field information, see the table in the next section.
@@ -388,7 +383,7 @@ image::AddNewAccount.png[width=450]
 |First name length
 |This field sets the length of the customer's first name. Kill Bill automatically calculates this number based on the location of the space between the first and last name. You can overwrite it with a different number, if necessary.
 
-*Note:* This field gets used if your organization needs to extract customers' first or last names for communication (invoices, emails, etc.). The field lets an organization accommodate variations of names used across the globe.
+*Note:* This field is used if your organization needs to extract customers' first or last names for communication (invoices, emails, etc.). The field lets an organization accommodate variations of names used across the globe.
 
 |External key
 |An optional alternate ID for the account. Once this is saved for the customer, you cannot change it.
@@ -408,9 +403,9 @@ image::AddNewAccount.png[width=450]
 |The time zone in which the customer resides. Once this is saved for the customer, you cannot change it.
 
 |Locale
-|Indicates the language that Kaui uses to send communication to the customer (invoices, emails, etc.)  If your organizaton communicates with customers in a language that's different than the default language, it's important to select the appropriate locale for the customer. For more information, see https://docs.killbill.io/latest/internationalization.html[the _Internationalization_ manual].
+|Indicates the language that Kaui uses to send communication to the customer (invoices, emails, etc.)  If your organizaton communicates with customers in a language that's different than the system's default language, it's important to select the appropriate locale for the customer. For more information, see https://docs.killbill.io/latest/internationalization.html[the _Internationalization_ manual].
 
-|Address line 1 / Address line 2
+|Address line 1 and Address line 2
 |The street address where the customer resides.
 
 |Zip code
@@ -432,20 +427,20 @@ image::AddNewAccount.png[width=450]
 |The customer's phone number.
 
 |Notes
-|Additional information about the account. What you type here is not viewable by the customer.
+|Additional information about the account. These notes are not viewable by the customer.
 
 |Migrated?
 |This field is for informational purposes only. You can check this box if you have migrated this customer account into Kill Bill.
 
 |Contact email addresses
-|Email addresses to be used in addition to the Email address specified above. The email addresses listed here (separated by ???) will receive the same emails as the main Email address. [ THIS IS A SEPARATE SCREEN / FLOW? ]
+|Email addresses to be used in addition to the email address specified above. The email addresses listed here (separated by ???) will receive the same emails as the main Email address. [ THIS IS A SEPARATE SCREEN / FLOW? ]
 |===
 
 //QST: For "contact email addresses," is the definition correct? Also, how do you separate multiple contact email addresses? Comma, space, hard line break?
 
 === Edit an Account
 
-You can make changes to account information except for Bill Cycle Day, Currency, External Key, and Time Zone.
+You can make changes to account information except for ID, External Key, Billing Cycle Day, Currency, and Timezone.
 
 1. Open the account on the Account page.
 2. Next to "Account Information," click *Edit*.
