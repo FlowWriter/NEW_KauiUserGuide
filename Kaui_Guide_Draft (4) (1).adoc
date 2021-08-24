@@ -9,7 +9,7 @@
 :icons: font
 
 //DINAH'S IMAGES
-//https://drive.google.com/drive/folders/1gmtaGIc2d9MGrgRYPfrZRIAZO3UfnCU3
+//https://drive.google.com/drive/folders==/1gmtaGIc2d9MGrgRYPfrZRIAZO3UfnCU3
 
 //Ruby30-x64/bin
 //Command to convert to PDF:
@@ -21,14 +21,14 @@
 //https://github.com/asciidoctor/asciidoctor.org/blob/main/docs/asciidoc-writers-guide.adoc
 //https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/
 
-== PART 1
+== Part 1 - Navigation and Interface [[part_1_navigation_and_interface]]
 
-== What Is Kaui?
+=== What Is Kaui?
 "Kaui" (KAUI) stands for Kill (Bill) Admin User Interface.
 
 Kaui is a user interface for Kill Bill. You can use Kaui to perform all sorts of back office tasks related to customer accounts. You can also use Kaui to perform more advanced tasks.
 
-== What You Can Do in Kaui
+=== What You Can Do in Kaui
 
 In Kaui, users can  perform basic tasks, such as:
 
@@ -44,26 +44,30 @@ However, Kaui can also help advanced users perform tasks, for example:
 
 These are just a handful of the tasks you can accomplish with Kaui. For a full list, see the _Table of Contents_ at the beginning of this guide.
 
-== How to Use This Guide
+=== How to Use This Guide
 
-<<_part_1>> explains how Kaui is organized
+<<part_1_navigation_and_interface>> explains how to *navigate* in Kaui and its *basic interface features*.
 
-<<_part_2>> explains how to perform the basic tasks for administering customer accounts, such as creating accounts, invoices, and so forth. It’s appropriate for back office staff, such as those working in customer service, product management, and finance.
+<<part_2_accounts>> explains how to perform the basic tasks for administering *customer accounts*, such as creating accounts, invoices, and so forth. It’s appropriate for back office staff, such as those working in customer service, product management, and finance.
 
-<<_part_3>> explains how to create and manage users as well as users roles and permissions. It’s appropriate for Kill Bill administrators and software developers.
+<<part_3_users_roles_permissions>> explains how to create and manage *users* as well as *users roles* and *permissions*. It’s appropriate for Kill Bill administrators and software developers.
 
-<<_part_4>> covers the advanced features of custom fields, tags and more.
+Advanced features are covered in Parts 4 - 6:
 
-The <<faqs>> are great if you have a basic question like, "How do I create an invoice?"
+* <<part_4_tags_and_custom_fields>>
+* <<part_5_plugin_manager_and_analytics>>
+* <<part_6_tenants_and_admin>>
 
-=== About Screenshots
+The <<faqs>> are great for *basic questions* like, _How do I create an invoice?_
+
+==== About Screenshots
 The screenshots displayed in this guide may differ from what you see on your Kaui screen. That's because your user permissions control what features you can access (i.e., what you see on the screen).
 
 If you have any questions about why your Kaui screen doesn't match what you see in this guide, ask your Kaui administrator.
 
-== Other Learning Resources
+=== Other Learning Resources
 
-=== Glossary
+==== Glossary
 
 // FIND OUT HOW TO LINK ACROSS DOCUMENTS
 
@@ -71,10 +75,10 @@ For terms specific to Kill Bill, we encourage you to review the following terms 
 
 Account | External Key | Parent | Payment Method | Subscription | Tag | Tenant | User
 
-=== Videos
+==== Videos
 We regularly add new overviews and tutorials to https://www.youtube.com/c/KillbillIoOSS[our YouTube videos], so check in from time to time.
 
-== Sign In and Sign Out [[log_in_and_log_out]]
+=== Sign In and Sign Out [[log_in_and_log_out]]
 
 To sign in to Kaui, type in your username and password, then select the *Sign In* button.
 
@@ -85,13 +89,13 @@ If your organization uses more than one Kill Bill tenant, select the tenant from
 image::ChooseTenant.png[width=450]
 
 [NOTE]
-*Note:* Authentication is handled by Kill Bill. The method your organization uses to manage users is highly configurable. For information on managing users and permissions, see <<users_roles_permissions>>.
+*Note:* Authentication is handled by Kill Bill. The method your organization uses to manage users is highly configurable. For information on managing users and permissions, see <<part_3_users_roles_permissions>>.
 
 To log out of Kaui, select *SIGN OUT* in the upper right corner of the Kill Bill homepage:
 
 image::SignOut-Labeled.png[width=650]
 
-== Navigate
+=== Navigate
 This section gets you familiar with the standard features of Kaui's user interface, such as:
 
 * <<_homepage_layout>>
@@ -100,32 +104,28 @@ This section gets you familiar with the standard features of Kaui's user interfa
 * <<_basic_search>>
 * <<_advanced_search>>
 
-=== Homepage Layout
+==== Homepage Layout
 
 The homepage is the screen that Kaui displays after you first log in.
 
 image::Homepage-Labeled.png[width=650]
 
-[THESE ALL NEED TO LINK OUT TO THE RELEVANT SECTION]
-
-1. <<_basic_search>> (find customer accounts)
-2. <<_advanced_search>> (find invoices, payments, and more)
-3. Plugin specific screens (e.g., analytics (reporting), deposits (record wire transfers), KPM (Kill Bill Package Manager)
-4. <<_part_4,Tags, Tag Definitions, and Custom Fields>>
-5. Users, Tenants, and Admin
+1. <<_basic_search>>
+2. <<_advanced_search>>
+3. <<part_5_plugin_manager_and_analytics,Plugin Manager and Analytics>>
+4. <<part_4_tags_and_custom_fields,Tags and Custom Fields>>
+5. <<part_3_users_roles_permissions,Users,>> <<part_6_tenants_and_admin,Tenants, and Admin>>
 6. Username / Tenant name and  <<log_in_and_log_out,Sign Out>>
 7. Latest invoices, accounts, and payments (latest records created for this tenant)
 8. This is Killian, the Kill Bill mascot!
 
-*Advanced features you may or may not have access to, depending on your user permissions.
-
-=== Return to Homepage
+==== Return to Homepage
 
 From any screen in Kill Bill, you can return to the homepage by clicking the logo in the upper left corner:
 
 image::killbill_logo_LARGER.png[width=200]
 
-=== Icons
+==== Icons
 
 [cols="^1,3"]
 |===
@@ -161,7 +161,7 @@ _All users:_ In other locations in Kaui, click to select a tag to apply to the c
 |_Admin level feature:_ Appears at the top of the screen and gives you access to Users, Tenants, and Admin.
 |===
 
-=== Grids/Tables [[grids_tables]]
+==== Grids/Tables [[grids_tables]]
 Grids (also referred to as _tables_) appear throughout Kaui to keep lists organized:
 
 image::GridSample.png[]
@@ -170,9 +170,12 @@ For very large grids, use the pagination controls to view different "pages:"
 
 image::PaginationControls.png[80,500]
 
+[%unbreakable]
+--
 To sort columns on a grid, click the up/down arrow in that column's header:
 
 image::ShowSortArrowsOnColumn.png[width=450]
+--
 
 Kaui shows you which column is currently sorted by the purple arrow:
 
@@ -180,31 +183,34 @@ image::ShowSortByColumn.png[width=450]
 
 The direction of the arrow (up or down) indicates if the column is sorted in ascending or descending order.
 
-If relevant, you can click on a link in the grid to view that item's detail. For example, on the Invoices grid, click the link to open that specific invoice:
+If relevant, you can click a link in the grid to view that item's detail. For example, on the Invoices grid, click the link to open that specific invoice:
 
 image::ClickToViewDetail.png[width=450]
 
-=== Basic Search
+==== Basic Search
 
 [TIP]
 *Tip:* To view all accounts, place your cursor in the search field and press the Enter key.
 
-To search for customer accounts, use the basic search. Basic search is available at the top of the screen no matter where you are in Kaui:
+To search for customer accounts, use the basic search. Basic search is available at the top of the screen no matter where you are in Kaui.
 
-image::ShowTopSearch.png[width=650]
+image::ShowTopSearch.png[width=450]
 
+[%unbreakable]
+--
 You can also search on the following information:
 
 * ID
 * External key
 * Name
 * Email address
+--
 
 Basic search is also available in the center of the *homepage*:
 
 image::ShowSearchHomepage.png[width=650]
 
-=== Advanced Search
+==== Advanced Search
 
 An advanced search can help you find customer account information as well as other types of objects in the system:
 
@@ -226,7 +232,7 @@ To perform an advanced search:
 
 image::ShowAdvancedSearch.png[width=650]
 
-Kaui displays the Advanced Search popup:
+Kaui displays the Advanced Search pop-up:
 
 image::AdvancedSearchPopup.png[width=450]
 
@@ -246,23 +252,19 @@ image::AdvSearch-ObjectTypeDropdown.png[width=450]
 . Click the *Search* button. Kaui displays the search results.
 
 [TIP]
-*Tip:* At the bottom of the Advanced Search popup, Kaui displays the search syntax. You can copy and paste this advanced search syntax into a basic search field. This is helpful if you frequently perform the same kinds of advanced searches.
-
-_Example:_
+*Tip:* At the bottom of the Advanced Search pop-up, Kaui displays the search syntax. You can copy and paste this advanced search syntax into a basic search field. This is helpful if you frequently perform the same kinds of advanced searches. For example:
 
 image::AdvancedSearchSyntax-Labeled.png[]
 
 //________________________________________________//
 
-== PART 2
-
-== Accounts
+== Part 2 - Accounts [[part_2_accounts]]
 
 This section helps you become familiar with customer accounts and the layout of the Account page.
 
 The Account page provides information about a specific customer, such as email address, physical address, and so forth. It is also the central location for the customer's billing information, subscriptions, invoices, and payment methods.
 
-To find a customer in the system, use <<Basic Search>> or <<Advanced Search>>. To open the customer account, click on the customer ID in the search results.
+To find a customer in the system, use <<Basic Search>> or <<Advanced Search>>. To open the customer account, click the customer ID in the search results.
 
 The next section explains how the Account page is laid out. To skip this and see the task-based steps, go to <<Create an Account>>.
 
@@ -278,9 +280,11 @@ The Account page has the following sections:
 
 image::AccountPage_Labeled.png[]
 
+[%unbreakable]
+--
 *1. Account Sub-Menu*
 
-The Account sub-menu organizes and provides access to different areas of the customer's account:
+The *Account* sub-menu organizes and provides access to different areas of the customer's account:
 
 * Subscriptions
 * Invoices
@@ -288,10 +292,11 @@ The Account sub-menu organizes and provides access to different areas of the cus
 * Timeline
 * Tags
 * Custom Fields
+--
 
 image::Account-Submenu.png[width=450]
 
-To see these areas, click on the relevant item on the sub-menu. To return to the customer's Account page, click *Account* on the sub-menu.
+To see these areas, click the relevant item on the sub-menu. To return to the customer's Account page, click *Account* on the sub-menu.
 
 *2. Account Information*
 
@@ -376,6 +381,7 @@ image::AddNewAccount.png[width=550]
 [start=4]
 . Click the *Save* button.
 
+<<<
 ==== Account Field Information
 
 [cols="1,3"]
@@ -462,7 +468,7 @@ image::Account_UpdateScreen.png[width=450]
 . Click the *Save* button.
 
 === Add Additional Contact Emails
-If a customer wants to receive email at more than one email address (which is the one defined in the Email field for the account), you can add more email addresses.
+If a customer wants to receive email at more than one email address (which is the one defined in the *Email* field for the account), you can add more email addresses.
 
 1. Open the account on the Account page.
 2. In the Personal Information section, click the gray down arrow ( image:i_GrayDownArrow.png[] ) to expand the section.
@@ -505,7 +511,7 @@ Use the steps in this section to indicate you will no longer be doing business w
 1. Open the account on the Account page.
 2. Next to Account Information, click *Close*.
 
-Kaui displays the Close Account pop-up:
+Kaui displays the *Close Account* pop-up:
 
 image::CloseAccountPopup.png[width=450]
 
@@ -522,7 +528,7 @@ image::CloseAccountPopup.png[width=450]
 [start=5]
 . Click the *Close* button.
 
-Kaui displays a message that lets you know the account was closed. In addition, the Account sub-menu displays "Closed":
+Kaui displays a message that lets you know the account was closed. In addition, the *Account* sub-menu displays "Closed:"
 
 image::AccountSubmenu-Closed.png[width=450]
 
@@ -550,6 +556,7 @@ image::Account-TagDropdown.png[width=450]
 [start=4]
 . Click the *Update* button to save your changes.
 
+<<<
 === Link to Parent Account
 
 When you link an account to a _parent_ account, the account becomes a _child_ account. Defining a parent-child association between accounts lets you define which entity is responsible for paying the invoice. For more information on this feature, see the https://docs.killbill.io/latest/ha.html[_Hierarchical Accounts Tutorial_].
@@ -560,7 +567,7 @@ When you link an account to a _parent_ account, the account becomes a _child_ ac
 
 image::Account-ParentField-Labeled.png[width=450]
 
-Kaui opens a popup:
+Kaui opens a pop-up:
 
 image::LinkToParentPopup.png[width=450]
 
@@ -579,7 +586,7 @@ You can open the parent account by clicking the account ID link.
 
 In production systems, payment method information is typically added via gateway-specific data flows. However, you can use this Payment Method section for testing purposes.
 
-[WARN]
+[WARNING]
 *Warning!* For PCI compliance, _do not_ enter any genuine payment information in these fields.
 
 ==== View Payment Method Details
@@ -587,7 +594,7 @@ In production systems, payment method information is typically added via gateway
 To view a payment method after it's created:
 
 1. Open the account on the Account page.
-2. In the Payment Methods area, click the gray down arrow ( image:i_GrayDownArrow.png[] ) next to the payment method.
+2. In the *Payment Methods* area, click the gray down arrow ( image:i_GrayDownArrow.png[] ) next to the payment method.
 
 Kaui expands the details for the payment method:
 
@@ -658,9 +665,9 @@ image::AddPaymentMethodScreen.png[width=450]
 |The billing address associated with this card.
 
 |Add property (Name/Value)
-|Use the Name/Value fields to assign custom fields and values to the payment method.
+|Use the *Name/Value* fields to assign custom fields and values to the payment method.
 
-*Note:* Custom fields are an advanced feature. For more information, see <<_part_4>>.
+*Note:* Custom fields are an advanced feature. For more information, see <<part_4_tags_and_custom_fields>>.
 
 |Default payment method?
 |Check the box to set this payment method as the default. Kill Bill uses the default payment method to automatically pay invoices (whether the invoice is generated by the system or manually by a user).
@@ -675,30 +682,46 @@ image:PaymentMethodStar-Labeled.png[width=350]
 
 This section explains how to apply a transaction to a payment method. These transactions include:
 
-* Authorize
-* Capture
-* Chargeback
-* Credit
-* Purchase (i.e., charge)
-* Refund
-* Void
+[cols="1,1"]
+[frame=none]
+[grid=none]
+|===
+
+|* Authorize
+|* Purchase (i.e., charge)
+
+|* Capture
+|* Refund
+
+|* Chargeback
+|* Void
+
+|* Credit
+|
+
+|===
 
 [NOTE]
 *Note:* These transactions are directly applied on the payment instrument (as opposed to being applied to the unpaid invoice). Additionally, "credit" here refers to depositing funds directly to the customer card and is unrelated to account credits.
 
 1. Open the account on the Account page.
-2. In the Payment Methods area, click the gray down arrow ( image:i_GrayDownArrow.png[] ) next to the payment method.
+2. In the *Payment Methods* area, click the gray down arrow ( image:i_GrayDownArrow.png[] ) next to the payment method.
 3. Select the type of transaction you want to perform:
 
 image::Payment_Method-Transactions.png[width=450]
 
+[NOTE]
+*Note:* This area lists Authorize, Purchase, and Credit. For other transaction types, click any of these options. You will be able to change the transaction type on the next screen.
+
+
+<<<
 Kaui displays the Process Transaction screen:
 
-image::ProcessTransaction.png[width=550]
+image::ProcessTransaction.png[width=450]
 
 [start=4]
 . Fill in the fields. For field information, see the following section.
-. Click the *Save* button. Kaui saves the transaction and displays it on the Payments page.
+. Click the *Save* button. Kaui saves the transaction and displays it on the <<_payments,Payments page>>.
 
 ==== Process Transaction Field Information
 
@@ -716,9 +739,9 @@ image::ProcessTransaction.png[width=550]
 |The currency used for the transaction. This field defaults from the customer account.
 
 |Payment key
-|The unique payment key (ID) to which you want to apply the transaction. This field is required for every transaction type _except_ Auth, Credit, and Purchase.
+|The unique payment key (ID) to which you want to apply the transaction. This field is required for transaction types that are applied to a specific payment (Capture, Chargeback, Refund, Void).
 
-*Note:* You can copy the payment key for a specific transaction from the *External Key* column of the Payments page. Or you can copy it from the URL displayed in your browser's address:
+*Note:* You can copy the payment key for a specific transaction from the *External Key* column of the Payments page. Or you can copy it from the URL displayed on your browser's address line:
 
  _Example:_
 
@@ -727,19 +750,19 @@ URL: `https://demo.killbill.io/accounts/cb736a4f-9b56-4074-ae07-1d37b37cb69f/pay
 Payment key: `0d1e11e5-2df6-4b6b-992f-e9ff2de38cef`
 
 |Transaction key
-|Kill Bill automatically generates an external transaction key for Auth, Purchase, and Credit transactions.
+|Kill Bill automatically generates an external transaction key for Authorize, Purchase, and Credit transactions.
 To process a transaction that requires the transaction key, open the payment detail from the Payments screen and copy the key from the *Transaction External Key* column.
 
 image:TransactionKey-Labeled.png[width=350]
 
 |Reason and Comment
-|The text you enter for Reason and Comment displays on the <<_timeline>> page.
+|The text you enter here displays on the <<_timeline>> page.
 
 |Add control plugin
-|For information on control plugins, see <<_part_4>>.
+|For information on control plugins, see <<part_4_tags_and_custom_fields>>.
 
 |Add property (Name/Value)
-|Use this area to assign custom fields and values to the transaction. For information on custom fields, see <<_part_4>>.
+|Use this area to assign custom fields and values to the transaction. For information on custom fields, see <<part_4_tags_and_custom_fields>>.
 
 |===
 
@@ -751,13 +774,13 @@ image:TransactionKey-Labeled.png[width=350]
 To delete a payment method:
 
 1. Open the account on the Account page.
-2. In the Payment Methods area, click the red X ( image:i_RedX.png[] ) next to the payment method. Kaui _immediately_ removes the payment method.
+2. In the *Payment Methods* area, click the red X ( image:i_RedX.png[] ) next to the payment method. Kaui _immediately_ removes the payment method.
 
 //________________________________________________//
 
-== Subscriptions
+=== Subscriptions
 
-_Currently in process._
+*_IN PROCESS_*
 
 This area of Kaui lists the subscriptions associated with the account.
 
@@ -769,23 +792,23 @@ This area of Kaui lists the subscriptions associated with the account.
 
 //________________________________________________//
 
-== Invoices
+=== Invoices
 
-_Currently in process._
+*_IN PROCESS_*
 
 This area of Kaui lists the invoices applied to the account. An invoice can get generated automatically if the customer has a recurring subscription. You can also generate an invoice for the account by adding a charge.
 
-//To view an account's invoices, click on Invoices on the submenu:
+//To view an account's invoices, click Invoices on the submenu:
 
-//Click on the invoice number to view the invoice detail:
+//click the invoice number to view the invoice detail:
 
 //If an invoice has been paid, the payment information is listed directly under the invoice information:
 
 //________________________________________________//
 
-== Payments
+=== Payments
 
-_Currently in process._
+*_IN PROCESS_*
 
 This area of Kaui lists the payments applied to the account.
 
@@ -795,17 +818,17 @@ Another way to generate a payment is to add a charge to the account.
 
 To view an account's payments:
 
-1. Click on *Payments* on the submenu.
-2. Click on the payment number to view its detail.
+1. Click *Payments* on the submenu.
+2. Click the payment number to view its detail.
 
 //screenshot needed
 
 
-=== Charges, Refunds, and Invoices
+==== Charges, Refunds, and Invoices
 
-_Currently in process._
+*_IN PROCESS_*
 
-==== Create Charge
+===== Create Charge
 
 Creating a charge in Kaui creates a new invoice. To create a charge:
 
@@ -813,7 +836,7 @@ Creating a charge in Kaui creates a new invoice. To create a charge:
 
 image::AddCredit-Labeled.png[width=450]
 
-Kaui opens the Add New Charge pop-up:
+Kaui opens the *Add New Charge* pop-up:
 
 image::AddNewChargePopup.png[width=450]
 
@@ -830,46 +853,70 @@ image::AddNewChargePopup.png[width=450]
 
 If you do not commit the invoice, it will stay in Draft mode. You can commit it by opening it from the Invoices page and clicking *Commit*. [[CHECK]]
 
-==== Create Refund
+===== Create Refund
 
-==== Create Invoice
+===== Create Invoice
 
-==== Authorize, Capture, Purchase, Chargeback, Credit, Void? [[Some are listed under the specific payment method on the Accounts > Payment Methods]]
+Authorize, Capture, Purchase, Chargeback, Credit, Void?
 
-[[How to view/interpret the timeline. What it shows.]]
 
-== Timeline
+=== Timeline
+
+[How to view/interpret the timeline. What it shows.]
+
+The Timeline also includes information about payment retries (When an account is unpaid, Kill Bill (the payment retry system) retries payments per the scheduled configuration.
 
 The billing timeline shows all the events that occurred for a specific user account:
 
 The top two *Filter by...* dropdown fields let you filter the events by subscription bundle or by event type.
 
-In the Details column, you can click on payment and invoice links to open the associated documents.
+In the *Details* column, you can click payment and invoice links to open the associated documents.
 
 image::TimelinePage.png[]
 
+//________________________________________________//
+
+== Part 3 - Users, Roles, and Permissions [[part_3_users_roles_permissions]]
+
+*_IN PROCESS_*
+
+//either database or third-party integration for storing usernames and passwords
+
+//The default "admin" username/password includes all of the roles and permissions available with Kill Bill.
 
 //________________________________________________//
 
-== PART 3 - IN PROCESS
+== Part 4 - Tags and Custom Fields [[part_4_tags_and_custom_fields]]
 
-== Users, Roles, and Permissions [[users_roles_permissions]]
+*_IN PROCESS_*
 
-either database or third-party integration for storing usernames and passwords
+=== Tags
 
-The default "admin" username/password includes all of the roles and permissions available with Kill Bill.
-
-//________________________________________________//
-
-== PART 4 - IN PROCESS
-
-== Tags
-
-== Custom Fields
+=== Custom Fields
 
 //________________________________________________//
 
-== FAQs [[faqs]]  - IN PROCESS
+== Part 5 - Plugin Manager and Analytics  [[part_5_plugin_manager_and_analytics]]
+
+*_IN PROCESS_*
+
+=== KPM (Kill Bill Package Manager)
+
+=== Analytics and Reporting
+
+=== Deposits (Wire Transfers)
+
+//________________________________________________//
+
+== Part 6 - Tenants and Admin [[part_6_tenants_and_admin]]
+
+*_IN PROCESS_*
+
+//________________________________________________//
+
+== FAQs [[faqs]]
+
+*_IN PROCESS_*
 
 //I'm thinking this will get so long that it might be best to make it a separate manual?
 
