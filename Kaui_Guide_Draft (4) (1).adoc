@@ -713,7 +713,6 @@ image::Payment_Method-Transactions.png[width=450]
 [NOTE]
 *Note:* This area lists Authorize, Purchase, and Credit. For other transaction types, click any of these options. You will be able to change the transaction type on the next screen.
 
-
 <<<
 Kaui displays the Process Transaction screen:
 
