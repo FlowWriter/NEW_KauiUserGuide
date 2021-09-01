@@ -1,7 +1,8 @@
-= Kaui User Guide
-(c) 2021 The Billing Project, LLC
+= Kaui User Guide - DRAFT, PARTIAL
+© 2021 The Billing Project, LLC
+:doctype: book
 :revlevel: 1.0
-:revdate: June 2021
+:revdate: September 2021
 :revremarks: first draft
 :toc:
 :toclevels: 3
@@ -20,6 +21,8 @@
 //https://asciidoctor.org/
 //https://github.com/asciidoctor/asciidoctor.org/blob/main/docs/asciidoc-writers-guide.adoc
 //https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/
+//https://github.com/asciidoctor/asciidoctor-pdf/tree/main#readme
+//https://github.com/asciidoctor/asciidoctor-pdf/blob/main/docs/theming-guide.adoc#keys-extends
 
 == Part 1 - Navigation and Interface [[part_1_navigation_and_interface]]
 
