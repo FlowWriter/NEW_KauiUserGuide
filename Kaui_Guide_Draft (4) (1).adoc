@@ -27,9 +27,14 @@
 == Part 1 - Navigation and Interface [[part_1_navigation_and_interface]]
 
 === What Is Kaui?
-"Kaui" (KAUI) stands for Kill (Bill) Admin User Interface.
+"Kaui" (KAUI) stands for Kill (Bill) Admin User Interface. This self-contained web application interacts with Kill Bill over HTTPS.
 
-Kaui is a user interface for Kill Bill. You can use Kaui to perform all sorts of back office tasks related to customer accounts. You can also use Kaui to perform more advanced tasks.
+Backoffice staff (for example, Support or Finance) will find Kaui useful to process refunds, credits, chargebacks, and so forth. Kaui also enables the Kill Bill administrator to perform more advanced tasks, such as managing tags, deploying plugins, and configuring the tenant(s).
+
+Other types of users who might find Kaui useful are developers (for testing), operations, and product managers.
+
+[NOTE]
+For Developers: Kaui functionality is provided via a series of Ruby on Rails mountable engines. You can extend its functionality (for example, to provide a custom UI for your plugins) by mounting your own engine(s).
 
 === What You Can Do in Kaui
 
@@ -207,9 +212,9 @@ image::ShowTopSearch.png[width=450]
 
 [%unbreakable]
 --
-You can also search on the following information:
+You can search for an account using the following criteria:
 
-* ID
+* Account ID
 * External key
 * Name
 * Email address
@@ -221,19 +226,18 @@ image::ShowSearchHomepage.png[width=650]
 
 ==== Advanced Search
 
-An advanced search can help you find customer account information as well as other types of objects in the system:
+An advanced search can help you find account information as well as other types of objects in the system:
 
 * Bundle
-* Invoice
 * Credit
 * Custom field
-* Invoice payment
 * Invoice
+* Invoice payment
 * Payment
 * Subscription
-* Transaction
 * Tag
 * Tag definition
+* Transaction
 
 To perform an advanced search:
 
@@ -254,7 +258,7 @@ image::AdvSearch-ObjectTypeDropdown.png[width=450]
 . In the *Search for* field, enter the identifier (ID) of the object you're searching for. (_Example:_ If you're searching for a specific invoice, type in the invoice number.)
 
 [NOTE]
-*Note:* In addition to searching with an ID, some object types can be searched for using an external key, such as the customer account.
+*Note:* In addition to searching with an ID, some object types can be searched for using an external key. The object types that include an external key include: account, bundle, payment, subscription, transaction.
 
 [start=4]
 . If you want Kaui to search and display the first record in the search results, click the *Fast search* checkbox.
@@ -353,7 +357,11 @@ You can also see a summary of billing information:
 *Note:* The account can have a negative account balance, but not be overdue. That's because overdue status depends on invoice due dates and how late payments are defined based on a company's business policy. For example, an invoice may not be overdue if a company allows a 15-day grace period (a.k.a. NET terms) to make a payment.
 
 |Bill cycle day
-|The day of the month on which the system generates an invoice.
+|The day of the month on which the system generates an invoice for this account. This field applies to accounts that are subscribed to monthly subscriptions (or a multiple of monthly, such as quarterly, annually, etc.).
+
+By default, the system sets this day to be the day the customer signed up for their first subscription. However, the bill cycle day (BCD) for can vary depending on the billing alignment rules specified in the catalog.
+
+For more information, see https://docs.killbill.io/latest/userguide_subscription.html#_billing_alignment_rules[Billing Alignment Rules] in the _Subscription_ manual.
 
 |Next invoice date
 |The date on which the system generates the customer's next invoice.
