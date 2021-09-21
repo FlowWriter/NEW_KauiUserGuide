@@ -254,11 +254,11 @@ image::AdvancedSearchPopup.png[width=450]
 
 image::AdvSearch-ObjectTypeDropdown.png[width=450]
 
+[NOTE]
+*Note:* For information on which fields are searched for each object type, see the table in the next section.
+
 [start=3]
 . In the *Search for* field, enter the identifier (ID) of the object you're searching for. (_Example:_ If you're searching for a specific invoice, type in the invoice number.)
-
-[NOTE]
-*Note:* In addition to searching with an ID, some object types can be searched for using an external key. The object types that include an external key include: account, bundle, payment, subscription, transaction.
 
 [start=4]
 . If you want Kaui to search and display the first record in the search results, click the *Fast search* checkbox.
@@ -268,6 +268,50 @@ image::AdvSearch-ObjectTypeDropdown.png[width=450]
 *Tip:* At the bottom of the Advanced Search pop-up, Kaui displays the search syntax. You can copy and paste this advanced search syntax into a basic search field. This is helpful if you frequently perform the same kinds of advanced searches. For example:
 
 image::AdvancedSearchSyntax-Labeled.png[]
+
+==== Searchable Fields by Object Type
+
+[cols="1,3"]
+|===
+|Object Type |Searchable Fields
+
+|Account
+|account ID, name, email, company name, external key
+
+|Bundle
+|account ID, bundle ID, external key
+
+|Credit
+|invoice item ID
+
+|Custom field
+|custom field ID, field name, field value, object type
+
+|Invoice
+|invoice number, invoice ID, account ID, currency
+
+|Invoice payment
+|payment ID
+
+|Payment
+|payment ID, external key
+
+|Payment method
+|payment method ID, external key
+
+|Subscription
+|subscription ID, external key
+
+|Tag
+|tag ID
+
+|Tag definition
+|tag fefinition ID
+
+|Transaction
+|transaction ID, external key
+
+|===
 
 //________________________________________________//
 
