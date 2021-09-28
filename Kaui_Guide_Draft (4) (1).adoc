@@ -57,29 +57,29 @@ We regularly add new overviews and tutorials to https://www.youtube.com/c/Killbi
 
 The terms listed below are used frequently in this guide. We've provided an abbreviated description below. For a full description, see the Kill Bill Glossary. [LINK]
 
-Account
+Account (a.k.a. customer account):: A record that contains details about the customer (name, address, etc.).
 
-Child
+Child:: An account that is associated with a parent account.
 
-External Key
+External Key:: An alternative unique ID for an object.
 
-Parent
+Parent:: An account that contains one or more child accounts.
 
-Payment Method
+Payment Method:: A record of the details required for Kill Bill to trigger a payment.
 
-Plan
+Plan:: Define how much a customer pays for a product and the frequency of the payment.
 
-Plugin
+Plugin:: Software that runs alongside Kill Bill in order to provide additional functionality.
 
-Phase
+Phase (a.k.a plan phase):: Time periods within a subscription during which certain rules apply.
 
-Subscription
+Subscription:: A contract between you (the business) and a customer that associates an account with a plan and a specific start date.
 
-Tag
+Tag:: A property that can be added to an object (for example, an account or a subscription) for information purposes or to affect the behavior of the system.
 
-Tenant
+Tenant:: The division or organization that is using Kill Bill as a group of users. Note that an organization can have more than one tenant, as Kill Bill supports multitenancy.
 
-User
+User:: A person who logs on to use Kaui.
 
 == Part 1 - Navigation and Interface [[part_1_navigation_and_interface]]
 
