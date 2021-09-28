@@ -47,16 +47,39 @@ If you have any questions about why your Kaui screen doesn't match what you see 
 
 == Other Learning Resources
 
+=== Videos
+We regularly add new overviews and tutorials to https://www.youtube.com/c/KillbillIoOSS[our YouTube videos], so check in from time to time.
+
+[glossary]
 === Glossary
 
 // FIND OUT HOW TO LINK ACROSS DOCUMENTS
 
-For terms specific to Kill Bill, we encourage you to review the following terms in the  _Kill Bill Glossary_:
+The terms listed below are used frequently in this guide. We've provided an abbreviated description below. For a full description, see the Kill Bill Glossary. [LINK]
 
-Account | External Key | Parent | Payment Method | Subscription | Tag | Tenant | User
+Account
 
-=== Videos
-We regularly add new overviews and tutorials to https://www.youtube.com/c/KillbillIoOSS[our YouTube videos], so check in from time to time.
+Child
+
+External Key
+
+Parent
+
+Payment Method
+
+Plan
+
+Plugin
+
+Phase
+
+Subscription
+
+Tag
+
+Tenant
+
+User
 
 == Part 1 - Navigation and Interface [[part_1_navigation_and_interface]]
 
@@ -120,15 +143,15 @@ image::Homepage-Labeled.png[width=650,align="center"]
 
 1. <<_basic_search>>
 2. <<_advanced_search>>
-3. <<part_5_plugin_manager_and_analytics,Plugin Manager and Analytics>>
-4. <<part_4_tags_and_custom_fields,Tags and Custom Fields>>
-5. <<part_3_users_roles_permissions,Users,>> <<part_6_tenants_and_admin,Tenants, and Admin>>
+3. <<part_5_plugin_manager_and_analytics,Plugin Manager and Analytics>> _Not yet documented._
+4. <<part_4_tags_and_custom_fields,Tags and Custom Fields>>  _Not yet documented._
+5. <<part_3_users_roles_permissions,Users,>> <<part_6_tenants_and_admin,Tenants, and Admin>>  _Not yet documented._
 6. Username / Tenant name and  <<log_in_and_log_out,Sign Out>>
 7. Latest invoices, accounts, and payments (latest records created for this tenant)
 8. This is Killian, the Kill Bill mascot!
 
 ==== Return to Homepage
-
+``
 From any screen in Kill Bill, you can return to the homepage by clicking the logo in the upper left corner:
 
 image::killbill_logo_LARGER.png[width=200,align="center"]
